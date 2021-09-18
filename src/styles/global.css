@@ -1,0 +1,7 @@
+body {
+  box-sizing: border-box;
+}
+
+body, p, small, span {
+  font-family: "Noto Serif SC", serif, "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+}

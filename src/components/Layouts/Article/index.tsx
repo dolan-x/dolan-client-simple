@@ -52,7 +52,7 @@ const Article: FC<ArticleProps> = ({
       />
       <Widget>
         <article>
-          {thumbnail && <Thumbnail {...{ thumbnail, id, title }} />}
+          {thumbnail && <Thumbnail hoverable={false} {...{ thumbnail, id, title }} />}
           {pageType === 'post' && renderAuthors() }
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </article>

@@ -37,3 +37,10 @@ yarn-error.log*
 .history
 
 .vercel
+
+yarn.lock
+
+.vscode/
+
+.editorconfig
+

@@ -1,8 +1,0 @@
-autoOpen: false
-apps:
-  - port: 3000
-    run: yarn dev
-    root: .
-    name: Dolan
-    description: Dolan开发
-    autoOpen: true

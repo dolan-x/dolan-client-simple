@@ -9,7 +9,8 @@
     "clean": "rimraf .next out npm-debug.log yarn-debug.log yarn-error.log pnpm-debug.log",
     "eslint:check": "eslint .",
     "eslint:fix": "eslint --fix .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "preinstall": "npx only-allow yarn"
   },
   "dependencies": {
     "@geist-ui/react": "^2.2.0",
@@ -50,6 +51,7 @@
     "husky": "^7.0.2",
     "lint-staged": "^11.1.2",
     "next-transpile-modules": "^8.0.0",
+    "only-allow": "^1.0.0",
     "postcss": "^8.3.6",
     "rimraf": "^3.0.2",
     "typescript": "^4.4.3"

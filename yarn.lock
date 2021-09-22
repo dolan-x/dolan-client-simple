@@ -2265,7 +2265,7 @@ __metadata:
     lint-staged: ^11.1.2
     next: ^11.1.2
     next-compose-plugins: ^2.2.1
-    next-i18next: 8.7.0
+    next-i18next: ^8.8.0
     next-iron-session: ^4.2.0
     next-transpile-modules: ^8.0.0
     nextjs-progressbar: ^0.0.11
@@ -4564,9 +4564,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-i18next@npm:8.7.0":
-  version: 8.7.0
-  resolution: "next-i18next@npm:8.7.0"
+"next-i18next@npm:^8.8.0":
+  version: 8.8.0
+  resolution: "next-i18next@npm:8.8.0"
   dependencies:
     "@babel/runtime": ^7.13.17
     "@types/hoist-non-react-statics": ^3.3.1
@@ -4579,7 +4579,7 @@ __metadata:
   peerDependencies:
     next: ">= 10.0.0"
     react: ">= 16.8.0"
-  checksum: 59e7137f21631a33bb20af4851900cd925640b3c1e3d5d938b052a0bf62d1228163d655ec59696807538bd1b847e62fc84756d7852ca84046762b26977cb585a
+  checksum: f22172d01ee349213d13f346656cbfe92294e96460b67dacb8123edeb65da22c5aba50557213441ef63ec180d405360b47d402e906a8477240fa8330667de649
   languageName: node
   linkType: hard
 

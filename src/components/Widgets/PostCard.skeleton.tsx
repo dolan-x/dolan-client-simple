@@ -5,7 +5,7 @@ import Widget from '.'
 
 const ContentLoader = dynamic(() => import('react-content-loader'))
 
-const PageSkeleton: FC = (props) => (
+const PostCardSkeleton: FC = (props) => (
   <div className="w-full text-center">
     <Widget>
       <ContentLoader
@@ -13,6 +13,7 @@ const PageSkeleton: FC = (props) => (
         speed={2}
         backgroundColor="#f3f3f3"
         foregroundColor="#ecebeb"
+        uniqueKey="PostCard.skeleton"
         {...props}
       >
         <rect
@@ -52,5 +53,5 @@ const PageSkeleton: FC = (props) => (
   </div>
 )
 
-PageSkeleton.displayName = 'DolanPageSkeleton'
-export default PageSkeleton
+PostCardSkeleton.displayName = 'DolanPostSkeleton'
+export default PostCardSkeleton

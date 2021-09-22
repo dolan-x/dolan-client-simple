@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-import PageSkeleton from '@/components/Widgets/PageSkeleton'
+import PageSkeleton from '@/components/Widgets/Page.skeleton'
 import TagCloudWidget from '@/components/Widgets/TagCloudWidget'
 import Layout from '@/components/Layouts'
 import Page from '@/components/Layouts/Page'

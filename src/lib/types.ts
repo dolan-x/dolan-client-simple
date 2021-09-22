@@ -10,16 +10,35 @@ export type Tag = {
 }
 
 export type Post = {
-  title: string
-  info: string
-  content: string
+  title: {
+    rendered: string
+  }
+  content: {
+    rendered: string
+  }
+  excerpt: {
+    rendered: string
+  }
+  sticky: false
   authors: Author[]
   timestamp: number
   id: string
   type: 'post' | 'mood'
-  thumbnail?: string
   tags: string[]
   category: string
+  postMetas: {
+    headingImage: string
+  }
+  adjacentPosts?: {
+    prev?: [
+      number,
+      string
+    ],
+    next?: [
+      number,
+      string
+    ]
+  }
 }
 
 export type Category = {

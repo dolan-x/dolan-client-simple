@@ -4,13 +4,12 @@ import { User } from '@geist-ui/react'
 import Widget from '@/components/Widgets'
 import PostMeta from '@/components/PostData/PostMeta'
 import PostFooter from '@/components/PostData/PostFooter'
-import Thumbnail from '@/components/Thumbnail'
+import HeadingImage from '@/components/HeadingImage'
 
 import { Author } from '@/lib/types'
 
 type ArticleProps = {
-  thumbnail?: string
-  id: string
+  headingImage?: string
   title: string
   timestamp: number
   authors: Author[]
@@ -20,8 +19,7 @@ type ArticleProps = {
   pageType?: 'post' | 'page'
 }
 const Article: FC<ArticleProps> = ({
-  thumbnail,
-  id,
+  headingImage,
   title,
   timestamp,
   authors,
@@ -52,7 +50,13 @@ const Article: FC<ArticleProps> = ({
       />
       <Widget>
         <article>
-          {thumbnail && <Thumbnail hoverable={false} {...{ thumbnail, id, title }} />}
+          {headingImage && (
+            <HeadingImage
+              hoverable={false}
+              headingImage={headingImage}
+              title={title}
+            />
+          )}
           {pageType === 'post' && renderAuthors() }
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </article>

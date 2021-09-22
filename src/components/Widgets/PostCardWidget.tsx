@@ -1,51 +1,59 @@
-import { FC } from 'react'
+import { FC, useMemo } from 'react'
 import NextLink from 'next/link'
 import { useTranslation } from 'react-i18next'
 import { Text, Link, Button, Avatar } from '@geist-ui/react'
 import { ArrowRightIcon } from '@heroicons/react/outline'
 
-import Thumbnail from '@/components/Thumbnail'
+import HeadingImage from '@/components/HeadingImage'
 import Widget from '.'
 
 import { Post } from '@/lib/types'
 import { getPostLink } from '@/utils'
 
-type PostProps = Post
-const PostCard: FC<PostProps> = ({
+type PostCardWidgetProps = {
+  title: string
+  excerpt: string
+  postID: string
+  authors: Post['authors']
+  postMetas: Post['postMetas']
+}
+const PostCardWidget: FC<PostCardWidgetProps> = ({
   title,
-  info,
-  id,
+  excerpt,
+  postID,
   authors,
-  thumbnail
-}: PostProps) => {
+  postMetas
+}: PostCardWidgetProps) => {
   const { t } = useTranslation('common')
+  const link = useMemo(() => getPostLink(postID), [postID])
 
   return (
     <Widget className="w-full px-0 ">
-      {/* Thumbnail */}
-      {thumbnail && (
+      {/* Heading Image */}
+      {postMetas.headingImage && (
         <NextLink
-          href={getPostLink(id)}
+          href={link}
           passHref
         >
           <Link className="w-full">
-            <Thumbnail
+            <HeadingImage
               hoverable
-              {...{ title, thumbnail, id }}
+              title={title}
+              headingImage={postMetas.headingImage}
             />
           </Link>
         </NextLink>
       )}
       {/* Title */}
       <NextLink
-        href={getPostLink(id)}
+        href={link}
         passHref
       >
         <Link>
           <Text h4>{title}</Text>
         </Link>
       </NextLink>
-      <p dangerouslySetInnerHTML={{ __html: info }} />
+      <p dangerouslySetInnerHTML={{ __html: excerpt }} />
 
       {/* Meta */}
       <Widget.Footer>
@@ -68,7 +76,7 @@ const PostCard: FC<PostProps> = ({
             auto
           >
             <NextLink
-              href={getPostLink(id)}
+              href={link}
               passHref
             >
               <Link className="items-center">
@@ -83,5 +91,5 @@ const PostCard: FC<PostProps> = ({
   )
 }
 
-PostCard.displayName = 'DolanPostCardWidget'
-export default PostCard
+PostCardWidget.displayName = 'DolanPostCardWidget'
+export default PostCardWidget

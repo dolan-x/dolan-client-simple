@@ -10,6 +10,7 @@ const SiteProfileSkeleton: FC = (props) => (
       speed={2}
       backgroundColor="#f3f3f3"
       foregroundColor="#ecebeb"
+      uniqueKey="SiteProfile.skeleton"
       {...props}
     >
       <circle

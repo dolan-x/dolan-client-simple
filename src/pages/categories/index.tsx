@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-import PageSkeleton from '@/components/Widgets/PageSkeleton'
+import PageSkeleton from '@/components/Widgets/Page.skeleton'
 import CategoriesWidget from '@/components/Widgets/CategoriesWidget'
 import Layout from '@/components/Layouts'
 import Page from '@/components/Layouts/Page'

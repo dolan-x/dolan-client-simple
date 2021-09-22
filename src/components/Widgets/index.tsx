@@ -16,7 +16,7 @@ type WidgetProps = CardProps
 const Widget: FC<WidgetProps> = ({ className = '', children, ...props }: WidgetProps) => {
   return (
     <Card
-      className={`mt-4 first:mt-0 ${className}`}
+      className={`mt-4 first:mt-0 shadow-widget ${className}`}
       {...props}
     >
       {children}

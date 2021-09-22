@@ -28,6 +28,9 @@ module.exports = {
       },
       zIndex: {
         9999: '9999'
+      },
+      boxShadow: {
+        widget: '0 4px 10px -4px #ebedf0'
       }
     }
   },

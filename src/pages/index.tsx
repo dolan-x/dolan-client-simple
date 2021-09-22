@@ -12,8 +12,8 @@ import { usePosts, useSiteProfile } from '@/lib/hooks'
 import SiteProfile from '@/components/SiteProfile'
 import Widget from '@/components/Widgets'
 import PostCardWidget from '@/components/Widgets/PostCardWidget'
-import PostCardSkeleton from '@/components/Widgets/PostCardSkeleton'
-import SiteProfileSkeleton from '@/components/Widgets/SiteProfileSkeleton'
+import PostCardSkeleton from '@/components/Widgets/PostCard.skeleton'
+import SiteProfileSkeleton from '@/components/Widgets/SiteProfile.skeleton'
 import Layout from '@/components/Layouts'
 import Home from '@/components/Layouts/Home'
 
@@ -41,10 +41,22 @@ const IndexPage: FC = () => {
     return (
       <>
         {posts.map((post: Post) => {
+          const {
+            title,
+            excerpt,
+            id,
+            authors,
+            postMetas
+          } = post
+
           if (post.type === 'post') {
             return <PostCardWidget
               key={post.id}
-              {...post}
+              title={title.rendered}
+              excerpt={excerpt.rendered}
+              postID={id}
+              authors={authors}
+              postMetas={postMetas}
             />
           }
           return null

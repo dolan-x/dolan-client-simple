@@ -19,16 +19,33 @@ type PostPageProps = {
 
 const PostPage: FC<PostPageProps> = ({ id, data }: PostPageProps) => {
   const { post } = usePost(id, data)
-  const { title } = post
+  const {
+    postMetas,
+    title,
+    timestamp,
+    authors,
+    content,
+    tags,
+    category
+  } = post
 
   return (
     <>
       <Head>
-        <title>{title}_Test</title>
+        <title>{title.rendered}_Test</title>
       </Head>
       <Layout>
         <Page>
-          <Article {...post} />
+          <Article
+            headingImage={postMetas.headingImage}
+            title={title.rendered}
+            timestamp={timestamp}
+            authors={authors}
+            content={content.rendered}
+            tags={tags}
+            category={category}
+            pageType="post"
+          />
           <Comments
             className="mt-4"
             type="waline"

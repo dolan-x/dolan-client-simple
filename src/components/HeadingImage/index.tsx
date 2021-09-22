@@ -1,17 +1,17 @@
 import { FC, useState, useEffect, useRef } from 'react'
-import ThumbnailSkeleton from './Thumbnail.skeleton'
+import HeadingImageSkeleton from './HeadingImage.skeleton'
 
-type ThumbnailProps = {
-  thumbnail: string
+type HeadingImageProps = {
+  headingImage: string
   title: string
   hoverable: boolean
 }
 
-const Thumbnail: FC<ThumbnailProps> = ({
-  thumbnail,
+const HeadingImage: FC<HeadingImageProps> = ({
+  headingImage,
   title,
   hoverable = false
-}: ThumbnailProps) => {
+}: HeadingImageProps) => {
   const [loading, setLoading] = useState<boolean>(true)
   const [showSkeleton, setShowSkeleton] = useState<boolean>(true)
   const imageRef = useRef<HTMLImageElement>(null)
@@ -31,11 +31,11 @@ const Thumbnail: FC<ThumbnailProps> = ({
   return (
     <div className="-mx-card -mt-card mb-5 w-thumbnail">
       <div className="p-0 overflow-hidden h-48 425:h-56 500:h-64 md:h-72 w-full rounded-t">
-        {showSkeleton && <ThumbnailSkeleton opacity={loading ? 0.5 : 0} />}
+        {showSkeleton && <HeadingImageSkeleton opacity={loading ? 0.5 : 0} />}
         <img
           ref={imageRef}
           onLoad={imageLoaded}
-          src={thumbnail}
+          src={headingImage}
           alt={title}
           className={`rounded-t ${hoverable && 'transition duration-1000 ease-in-out transform hover:scale-110'}`}
         />
@@ -44,5 +44,5 @@ const Thumbnail: FC<ThumbnailProps> = ({
   )
 }
 
-Thumbnail.displayName = 'DolanThumbnail'
-export default Thumbnail
+HeadingImage.displayName = 'DolanHeadingImage'
+export default HeadingImage

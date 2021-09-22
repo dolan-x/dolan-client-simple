@@ -1,7 +1,7 @@
 import { FC, useState, useEffect } from 'react'
 import ScrollToTop from 'react-scroll-up'
 import { Card } from '@geist-ui/react'
-import { ChevronUpCircle } from '@geist-ui/react-icons'
+import { ArrowCircleUpIcon } from '@heroicons/react/outline'
 
 const BackToTop: FC = () => {
   const [showAfterRender, setShowAfterRender] = useState<boolean>(false)
@@ -19,7 +19,7 @@ const BackToTop: FC = () => {
       <Card
         className="shadow-md rounded-full transform"
       >
-        <ChevronUpCircle />
+        <ArrowCircleUpIcon className="w-7 h-7" />
       </Card>
     </ScrollToTop>
   )

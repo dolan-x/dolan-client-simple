@@ -2,7 +2,7 @@ import { FC } from 'react'
 import NextLink from 'next/link'
 import { useTranslation } from 'react-i18next'
 import { Text, Link, Button, Avatar } from '@geist-ui/react'
-import { ArrowRight } from '@geist-ui/react-icons'
+import { ArrowRightIcon } from '@heroicons/react/outline'
 
 import Thumbnail from '@/components/Thumbnail'
 import Widget from '.'
@@ -73,7 +73,7 @@ const PostCard: FC<PostProps> = ({
             >
               <Link className="items-center">
                 {t('read-more')}
-                <ArrowRight className="w-6 h-6 -mr-3" />
+                <ArrowRightIcon className="w-5 h-5 -mr-3" />
               </Link>
             </NextLink>
           </Button>

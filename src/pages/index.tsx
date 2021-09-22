@@ -4,7 +4,7 @@ import Head from 'next/head'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
-import { EyeOff } from '@geist-ui/react-icons'
+import { EyeOffIcon } from '@heroicons/react/outline'
 
 import { Post } from '@/lib/types'
 import { usePosts, useSiteProfile } from '@/lib/hooks'
@@ -24,7 +24,7 @@ const Nothing: FC = () => {
   return (
     <Widget className="w-full mt-4">
       <Widget.Content className="flex justify-center">
-        <EyeOff className="w-6 h-6 mr-3" />
+        <EyeOffIcon className="w-6 h-6 mr-3" />
         {t('reached-bottom')}
       </Widget.Content>
     </Widget>

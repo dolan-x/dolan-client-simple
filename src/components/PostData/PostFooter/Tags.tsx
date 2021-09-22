@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Hash } from '@geist-ui/react-icons'
+import { HashtagIcon } from '@heroicons/react/outline'
 
 import Badge from '@/components/Common/Badge'
 
@@ -17,8 +17,12 @@ const Tags: FC<TagsProps> = ({ tags }: TagsProps) => {
           background={false}
           key={index}
         >
-          <Hash className="transform scale-75 text-yellow-300" />
-          {tag}
+          <div className="flex items-center mr-1">
+            <HashtagIcon className="w-5 h-5 text-yellow-300" />
+          </div>
+          <div>
+            {tag}
+          </div>
         </Badge>
       ))}
     </div>

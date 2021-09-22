@@ -174,16 +174,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@geist-ui/react-icons@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@geist-ui/react-icons@npm:1.0.1"
-  peerDependencies:
-    "@geist-ui/react": ">=1.0.0"
-    react: ">=16.13.0"
-  checksum: 5b8cceccaf35eb679aa7d4aaafe85f980c8af790694eb6815041c0effe91cdf5dfebda6c978c77bd6e6cec7c28142a2011a21151e419cc20d76809e68e848f49
-  languageName: node
-  linkType: hard
-
 "@geist-ui/react@npm:^2.2.0":
   version: 2.2.0
   resolution: "@geist-ui/react@npm:2.2.0"
@@ -257,6 +247,15 @@ __metadata:
     "@hapi/cryptiles": 5.x.x
     "@hapi/hoek": 9.x.x
   checksum: ef07abc8a55eb8b60ab0c09d797bb13b39d283260ecdabedc1568c64c47d8c15fe517beed4f76a2b69dac57e6c26cd30ac7612169c41adb8f4c77ea3f58d973d
+  languageName: node
+  linkType: hard
+
+"@heroicons/react@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "@heroicons/react@npm:1.0.4"
+  peerDependencies:
+    react: ">= 16"
+  checksum: 08f2853a49e51f274f22e8e1bb4e7d8a49456b7eb770447da66fd06ac05bf821ddf5d93170088d61ec44ae66cfbdc877c287861d5a3d22aad1785659502e3a71
   languageName: node
   linkType: hard
 
@@ -2243,7 +2242,7 @@ __metadata:
   resolution: "dolan@workspace:."
   dependencies:
     "@geist-ui/react": ^2.2.0
-    "@geist-ui/react-icons": ^1.0.1
+    "@heroicons/react": ^1.0.4
     "@types/node": ^16.9.2
     "@types/react": ^17.0.21
     "@typescript-eslint/eslint-plugin": ^4.31.1

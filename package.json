@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@geist-ui/react": "^2.2.0",
-    "@geist-ui/react-icons": "^1.0.1",
+    "@heroicons/react": "^1.0.4",
     "antd": "^4.16.13",
     "axios": "^0.21.4",
     "inter-ui": "^3.19.3",

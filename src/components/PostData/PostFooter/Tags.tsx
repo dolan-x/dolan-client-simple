@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { HashtagIcon } from '@heroicons/react/outline'
 
-import Badge from '@/components/Common/Badge'
+import Badge from '@/components/Shared/Badge'
 
 import { getTagLink } from '@/utils'
 

@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Text, Avatar } from '@geist-ui/react'
+import { Text } from '@geist-ui/react'
 
 type PostMetaProps = {
   title: string

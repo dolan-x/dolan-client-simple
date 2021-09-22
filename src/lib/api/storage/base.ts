@@ -1,8 +1,15 @@
-import { Post } from '@/lib/types'
+import {
+  Post,
+  PostID,
+  Tag,
+  TagSlug
+} from '@/lib/types'
 
 abstract class Base {
-  getPosts: () => Post[]
-  getPost: (id: number) => Post
+  abstract getPosts(): Post[]
+  abstract getPost(id: PostID): Post
+  abstract getTags(): Tag[]
+  abstract getTag(slug: TagSlug): Tag
 }
 
 export default Base

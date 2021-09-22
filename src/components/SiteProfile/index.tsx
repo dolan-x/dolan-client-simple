@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { Text } from '@geist-ui/react'
 
-import RoundedImage from '@/components/Common/RoundedImage'
+import RoundedImage from '@/components/Shared/RoundedImage'
 
 type SiteProfileProps = {
   favicon: string

@@ -12,7 +12,7 @@ type NativeAttrs = Omit<HTMLAttributes<any>, keyof Props>
 type TagProps = Props & NativeAttrs
 
 const Tag: FC<TagProps> = ({ name, href, count, backgroundColor, className = '', ...props }: TagProps) => {
-  const getClasses = () => 'rounded text-xs inline-block px-2 py-1 rounded-r-none'
+  const getClasses = () => 'rounded text-xs inline-block px-2 py-1'
 
   return (
     <div
@@ -25,13 +25,13 @@ const Tag: FC<TagProps> = ({ name, href, count, backgroundColor, className = '',
       >
         <Link>
           <div
-            className={getClasses()}
+            className={`${getClasses()} rounded-r-none`}
             style={{ backgroundColor }}
           >
             {name}
           </div>
           <div
-            className={`${getClasses()} bg-gray-100`}
+            className={`${getClasses()} rounded-l-none bg-gray-100`}
           >
             {count}
           </div>

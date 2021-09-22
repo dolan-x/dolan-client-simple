@@ -2,13 +2,16 @@ import { FC, useState, useEffect } from 'react'
 import NextLink from 'next/link'
 import { User, Link } from '@geist-ui/react'
 
+import NavItem from './NavItem'
+
 const Header: FC = () => {
   const [showAfterRender, setShowAfterRender] = useState<boolean>(false)
   useEffect(() => setShowAfterRender(true), [])
 
   if (!showAfterRender) return null
   return (
-    <header className="fixed top-0 h-auto w-full lg:py-4 lg:px-5 lg:backdrop-filter lg:backdrop-saturate-150 lg:backdrop-blur-sm lg:bg-header-background py-2 px-1 shadow-sm bg-white z-9999">
+    <header className="flex justify-between fixed top-0 h-auto w-full lg:py-4 lg:px-5 lg:backdrop-filter lg:backdrop-saturate-150 lg:backdrop-blur-sm lg:bg-header-background py-2 px-1 shadow-sm bg-white z-9999">
+      {/* Nav Start */}
       <div>
         <NextLink
           href="/"
@@ -21,6 +24,15 @@ const Header: FC = () => {
             />
           </Link>
         </NextLink>
+      </div>
+      {/* Nav End */}
+      <div>
+        <NavItem href="/categories">
+          Categories
+        </NavItem>
+        <NavItem href="/tags">
+          Tags
+        </NavItem>
       </div>
     </header>
   )

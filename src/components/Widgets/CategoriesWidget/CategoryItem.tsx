@@ -6,17 +6,21 @@ import { getCategoryLink } from '@/utils'
 
 type CategoryItemProps = {
   name: string
+  count: number
 }
 
-const CategoryItem: FC<CategoryItemProps> = ({ name }: CategoryItemProps) => {
+const CategoryItem: FC<CategoryItemProps> = ({ name, count }: CategoryItemProps) => {
   return (
     <div className="p-2 rounded-sm hover:bg-gray-100 transition">
       <NextLink
         href={getCategoryLink(name)}
         passHref
       >
-        <Link className="w-full">
+        <Link className="flex w-full justify-between">
           {name}
+          <div className="rounded bg-gray-100 px-2 py-1">
+            {count}
+          </div>
         </Link>
       </NextLink>
     </div>

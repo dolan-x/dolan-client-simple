@@ -7,7 +7,7 @@ export default (req: NextApiRequest, res: NextApiResponse): void => {
       {
         name: 'TypeScript',
         slug: 'ts',
-        count: 9
+        count: 4404024
       },
       {
         name: 'React',

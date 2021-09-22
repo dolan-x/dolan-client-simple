@@ -8,6 +8,7 @@ export default (req: NextApiRequest, res: NextApiResponse): void => {
     .json({
       name: slug,
       slug,
+      count: 114514,
       posts: [
         '1'
       ]

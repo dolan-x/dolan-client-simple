@@ -4,8 +4,10 @@ import { useTranslation } from 'next-i18next'
 import Widget from '..'
 import CategoryItem from './CategoryItem'
 
+import { Category } from '@/lib/types'
+
 type CategoriesWidgetProps = {
-  categories: string[]
+  categories: Category[]
 }
 const TagCloudWidget: FC<CategoriesWidgetProps> = ({ categories }: CategoriesWidgetProps) => {
   const { t } = useTranslation('categories')
@@ -17,8 +19,9 @@ const TagCloudWidget: FC<CategoriesWidgetProps> = ({ categories }: CategoriesWid
       </Widget.Title>
       {categories.map((category) => (
         <CategoryItem
-          name={category}
-          key={category}
+          name={category.name}
+          count={category.count}
+          key={category.name}
         />
       ))}
     </Widget>

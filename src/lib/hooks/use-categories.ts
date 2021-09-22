@@ -1,7 +1,9 @@
 import useSWR from 'swr'
 
+import { Category } from '@/lib/types'
+
 type UseCategoriesResult = {
-  categories: string[]
+  categories: Category[]
   isLoading: boolean
   isError: boolean
 }

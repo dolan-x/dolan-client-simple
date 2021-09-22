@@ -7,8 +7,8 @@
     "build": "cross-env NODE_ENV=production next build",
     "start": "cross-env NODE_ENV=production next start",
     "clean": "rimraf .next out npm-debug.log yarn-debug.log yarn-error.log pnpm-debug.log",
-    "eslint:check": "eslint .",
-    "eslint:fix": "eslint --fix .",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint --fix .",
     "prepare": "husky install",
     "preinstall": "npx only-allow yarn"
   },

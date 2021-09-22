@@ -14,12 +14,12 @@ import Page from '@/components/Layouts/Page'
 
 import { useTag } from '@/lib/hooks'
 import { getTagLink } from '@/utils'
-import { TagName } from '@/lib/types'
+import { TagSlug } from '@/lib/types'
 
 const TagPage: FC = () => {
   const router = useRouter()
   const { name } = router.query
-  const { tag, isLoading, isError } = useTag(name as TagName)
+  const { tag, isLoading, isError } = useTag(name as TagSlug)
   const { t } = useTranslation('tags')
 
   return (
@@ -45,6 +45,8 @@ const TagPage: FC = () => {
                 </Widget>
                 <Widget>
                   name: {tag.name}
+                  <br />
+                  slug: {tag.slug}
                   <br />
                   count: {tag.count}
                 </Widget>

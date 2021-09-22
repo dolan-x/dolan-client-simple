@@ -1,15 +1,15 @@
 import useSWR from 'swr'
 
-import { Tag, TagName } from '@/lib/types'
+import { Tag, TagSlug } from '@/lib/types'
 
-type UseTag = {
+type UseTagResult = {
   tag: Tag
   isLoading: boolean
   isError: boolean
 }
 
-export const useTag = (name: TagName): UseTag => {
-  const { data, error } = useSWR(`/api/tags/${name}`)
+export const useTag = (slug: TagSlug): UseTagResult => {
+  const { data, error } = useSWR(`/api/tags/${slug}`)
 
   return {
     tag: data,

@@ -1,15 +1,15 @@
 import useSWR from 'swr'
 
-import { Category, CategoryName } from '@/lib/types'
+import { Category, CategorySlug } from '@/lib/types'
 
-type UseCategory = {
+type UseCategoryResult = {
   category: Category
   isLoading: boolean
   isError: boolean
 }
 
-export const useCategory = (name: CategoryName): UseCategory => {
-  const { data, error } = useSWR(`/api/categories/${name}`)
+export const useCategory = (slug: CategorySlug): UseCategoryResult => {
+  const { data, error } = useSWR(`/api/categories/${slug}`)
 
   return {
     category: data,

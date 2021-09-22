@@ -4,10 +4,9 @@ export type Author = {
   bio?: string
 }
 
-export type Tag = {
-  name: string
-  count: number
-}
+export type PostID = string & { readonly brand: unique symbol }
+export type TagSlug = string & { readonly brand: unique symbol }
+export type CategorySlug = string & { readonly brand: unique symbol }
 
 export type Post = {
   title: {
@@ -41,8 +40,15 @@ export type Post = {
   }
 }
 
+export type Tag = {
+  name: string
+  slug: string
+  count: number
+}
+
 export type Category = {
   name: string
+  slug: string
   posts: PostID[]
 }
 
@@ -51,9 +57,5 @@ export type SiteProfile = {
   name: string
   description: string
 }
-
-export type PostID = string & { readonly brand: unique symbol }
-export type TagName = string & { readonly brand: unique symbol }
-export type CategoryName = string & { readonly brand: unique symbol }
 
 export type SupportedCommentSystems = 'waline' | 'twikoo' | 'disqus' | 'livere' | 'gitalk'

@@ -2,13 +2,13 @@ import useSWR from 'swr'
 
 import { Tag } from '@/lib/types'
 
-type UseTags = {
+type UseTagsResult = {
   tags: Tag[]
   isLoading: boolean
   isError: boolean
 }
 
-export const useTags = (): UseTags => {
+export const useTags = (): UseTagsResult => {
   const { data, error } = useSWR('/api/tags')
 
   return {

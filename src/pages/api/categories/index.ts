@@ -4,8 +4,15 @@ export default (req: NextApiRequest, res: NextApiResponse): void => {
   res
     .status(200)
     .json([
-      'TypeScript',
-      'React',
-      '文学'
+      {
+        name: 'TypeScript',
+        slug: 'ts',
+        count: 6
+      },
+      {
+        name: '文学',
+        slug: 'writing',
+        count: 9
+      }
     ])
 }

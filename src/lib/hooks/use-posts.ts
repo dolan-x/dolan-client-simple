@@ -2,13 +2,13 @@ import useSWR from 'swr'
 
 import { Post } from '@/lib/types'
 
-type UsePosts = {
+type UsePostsResult = {
   posts: Post[]
   isLoading: boolean
   isError: boolean
 }
 
-export const usePosts = (): UsePosts => {
+export const usePosts = (): UsePostsResult => {
   const { data, error } = useSWR('/api/posts')
 
   return {

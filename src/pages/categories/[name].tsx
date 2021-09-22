@@ -16,7 +16,7 @@ import Page from '@/components/Layouts/Page'
 
 import { useCategory, usePost } from '@/lib/hooks'
 import { getCategoryLink } from '@/utils'
-import { CategoryName, PostID } from '@/lib/types'
+import { CategorySlug, PostID } from '@/lib/types'
 
 const Post: FC<{ id: PostID }> = ({ id }) => {
   const {
@@ -48,7 +48,7 @@ const Post: FC<{ id: PostID }> = ({ id }) => {
 const CategoryPage: FC = () => {
   const router = useRouter()
   const { name } = router.query
-  const { category, isLoading, isError } = useCategory(name as CategoryName)
+  const { category, isLoading, isError } = useCategory(name as CategorySlug)
   const { t } = useTranslation('categories')
 
   return (

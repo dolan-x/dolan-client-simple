@@ -2,13 +2,13 @@ import useSWR from 'swr'
 
 import { SiteProfile } from '@/lib/types'
 
-type UseSiteProfile = {
+type UseSiteProfileResult = {
   siteProfile: SiteProfile
   isLoading: boolean
   isError: boolean
 }
 
-export const useSiteProfile = (): UseSiteProfile => {
+export const useSiteProfile = (): UseSiteProfileResult => {
   const { data, error } = useSWR('/api/profile/site')
 
   return {

@@ -19,7 +19,7 @@ const TagPage: FC = () => {
   const router = useRouter()
   const { name } = router.query
   const { tag, isLoading, isError } = useTag(name as TagSlug)
-  const { t } = useTranslation('tags')
+  const { t } = useTranslation('widgets')
 
   return (
     <>

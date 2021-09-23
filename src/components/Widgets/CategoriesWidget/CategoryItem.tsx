@@ -16,8 +16,10 @@ const CategoryItem: FC<CategoryItemProps> = ({ name, count }: CategoryItemProps)
         href={getCategoryLink(name)}
         passHref
       >
-        <Link className="flex w-full justify-between">
-          {name}
+        <Link className="flex items-center w-full justify-between">
+          <div className="break-all pr-3">
+            {name}
+          </div>
           <div className="rounded bg-gray-100 px-2 py-1">
             {count}
           </div>

@@ -48,7 +48,7 @@ const CategoryPage: FC = () => {
   const router = useRouter()
   const { name } = router.query
   const { category, isLoading, isError } = useCategory(name as CategorySlug)
-  const { t } = useTranslation('categories')
+  const { t } = useTranslation('widgets')
 
   return (
     <>

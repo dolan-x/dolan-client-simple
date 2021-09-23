@@ -1,3 +1,5 @@
+import { ReactNode } from 'react'
+
 /**
  * Receives a string,
  * returns an API URL.
@@ -46,4 +48,15 @@ export const getWordCount = (content: string): number => {
  */
 export const getLocalTime = (timestamp: number): string => {
   return new Date(timestamp).toLocaleString().replace(/:\d{1,2}$/, ' ')
+}
+/**
+ * Wraps the component.
+ * If it is loading, returns null.
+ * @param {boolean} isLoading
+ * @param {ReactNode} component
+ * @returns {ReactNode | null}
+ */
+export const wrapWidget = (isLoading: boolean, component: ReactNode) => {
+  if (isLoading) return null
+  return component
 }

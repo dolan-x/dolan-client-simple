@@ -4,13 +4,17 @@ import HeadingImageSkeleton from './HeadingImage.skeleton'
 type HeadingImageProps = {
   headingImage: string
   title: string
-  hoverable: boolean
+  className?: string
+  hoverable?: boolean
+  roundedBottom?: boolean
 }
 
 const HeadingImage: FC<HeadingImageProps> = ({
   headingImage,
   title,
-  hoverable = false
+  className = '',
+  hoverable = false,
+  roundedBottom = false
 }: HeadingImageProps) => {
   const [loading, setLoading] = useState<boolean>(true)
   const [showSkeleton, setShowSkeleton] = useState<boolean>(true)
@@ -29,15 +33,15 @@ const HeadingImage: FC<HeadingImageProps> = ({
   })
 
   return (
-    <div className="-mx-card -mt-card mb-5 w-thumbnail">
-      <div className="p-0 overflow-hidden h-48 425:h-56 500:h-64 md:h-72 w-full rounded-t">
+    <div className={`-mx-card -mt-card mb-5 w-heading-image ${className}`}>
+      <div className={`p-0 overflow-hidden h-48 425:h-56 500:h-64 md:h-72 w-full ${roundedBottom ? 'rounded-lg' : 'rounded-t-lg'}`}>
         {showSkeleton && <HeadingImageSkeleton opacity={loading ? 0.5 : 0} />}
         <img
           ref={imageRef}
           onLoad={imageLoaded}
           src={headingImage}
           alt={title}
-          className={`rounded-t ${hoverable && 'transition duration-1000 ease-in-out transform hover:scale-110'}`}
+          className={`${roundedBottom ? 'rounded-lg' : 'rounded-t-lg'} ${hoverable && 'transition duration-1000 ease-in-out transform hover:scale-110'}`}
         />
       </div>
     </div>

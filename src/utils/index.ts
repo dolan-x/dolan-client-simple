@@ -39,3 +39,11 @@ export const getWordCount = (content: string): number => {
     ? (content.match(/[\u00ff-\uffff]|[a-zA-Z]+/g) || []).length
     : 0
 }
+/**
+ * Timestamp to string util.
+ * @param {number} timestamp
+ * @returns {string}
+ */
+export const getLocalTime = (timestamp: number): string => {
+  return new Date(timestamp).toLocaleString().replace(/:\d{1,2}$/, ' ')
+}

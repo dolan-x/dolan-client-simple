@@ -11,16 +11,16 @@ module.exports = {
         'widget-title': '#7a7a7a'
       },
       width: {
-        home: '680px',
-        page: '720px',
-        thumbnail: 'calc(100% + 2 * 16px)'
+        aside: '240px',
+        main: 'calc(100% - 240px)',
+        'heading-image': 'calc(100% + 2 * 16px)'
       },
       margin: (theme, { negative }) => ({
         ...negative({ card: '16px' })
       }),
       backgroundColor: {
         'header-background': 'hsla(0,0%,100%,0.8)',
-        'body-color': '#fafafa'
+        'body-color': '#f4f4f4'
       },
       screens: {
         425: '425px',
@@ -30,7 +30,7 @@ module.exports = {
         9999: '9999'
       },
       boxShadow: {
-        widget: '0 4px 10px -4px #ebedf0'
+        widget: '0 1px 2px 0 rgb(0 0 0 / 10%)'
       }
     }
   },

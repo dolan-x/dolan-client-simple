@@ -1,27 +1,42 @@
-import { FC } from 'react'
-import { Text } from '@geist-ui/react'
+import { FC, useMemo } from 'react'
+import {
+  UsersIcon,
+  ClockIcon
+} from '@heroicons/react/outline'
 
-type PostMetaProps = {
-  title: string
-  timestamp: number
+import Widget from '@/components/Widgets'
+
+import { getLocalTime } from '@/utils'
+import { Post, Author } from '@/lib/types'
+
+const PostMetaItem: FC = ({ children }) => {
+  return (
+    <div className="flex items-center mr-3">
+      {children}
+    </div>
+  )
 }
 
-const PostMeta: FC<PostMetaProps> = ({ title }: PostMetaProps) => {
+type PostMetaProps = {
+  authorNames: Author['name'][]
+  timestamp: Post['timestamp']
+}
+const PostMeta: FC<PostMetaProps> = ({ authorNames, timestamp }: PostMetaProps) => {
+  const timeString = useMemo(() => getLocalTime(timestamp), [timestamp])
+
   return (
-    <div className="py-14 text-center">
-      <Text
-        h2
-        className="font-medium"
-      >
-        {title}
-      </Text>
-      <Text
-        small
-        className="uppercase text-gray-500"
-      >
-        Posted 1 year ago
-      </Text>
-    </div>
+    <Widget>
+      <Widget.Content className="flex">
+        <PostMetaItem>
+          <UsersIcon className="inline w-4 h-4" />
+          {authorNames}
+        </PostMetaItem>
+        <PostMetaItem>
+          <ClockIcon className="inline w-4 h-4" />
+          {timeString}
+        </PostMetaItem>
+      </Widget.Content>
+    </Widget>
   )
 }
 

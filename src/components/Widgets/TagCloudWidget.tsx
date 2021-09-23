@@ -10,7 +10,7 @@ type TagCloudWidgetProps = {
   tags: Tag[]
 }
 const TagCloudWidget: FC<TagCloudWidgetProps> = ({ tags }: TagCloudWidgetProps) => {
-  const { t } = useTranslation('tags')
+  const { t } = useTranslation('widgets')
 
   return (
     <Widget>

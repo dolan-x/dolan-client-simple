@@ -1,9 +1,13 @@
-import { NextPage } from 'next'
+import {
+  NextPage,
+  GetStaticProps
+} from 'next'
 import { AppProps } from 'next/app'
 import NextNProgress from 'nextjs-progressbar'
 import { ToastContainer } from 'react-toastify'
 import { SWRConfig } from 'swr'
 import { appWithTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { GeistProvider, CssBaseline } from '@geist-ui/react'
 
 import BackToTop from '@/components/BackToTop'

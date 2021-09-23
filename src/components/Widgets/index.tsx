@@ -12,18 +12,20 @@ const WidgetTitle: FC<WidgetTitleProps> = ({ children }:WidgetTitleProps) => {
   )
 }
 
-type WidgetProps = CardProps
-const Widget: FC<WidgetProps> = ({ className = '', children, ...props }: WidgetProps) => {
+type WidgetProps = CardProps & {
+  sticky?: boolean
+}
+const Widget: FC<WidgetProps> = ({ className = '', children, sticky = false, ...props }: WidgetProps) => {
   return (
     <Card
-      className={`mt-4 first:mt-0 shadow-widget ${className}`}
+      className={`mt-4 first:mt-0 shadow-widget rounded-lg border-none ${sticky ? 'sticky' : ''} ${className}`}
       {...props}
     >
       {children}
     </Card>
   )
 }
-type WidgetComponentType = typeof Card & {
+type WidgetComponentType = typeof Widget & {
   Title: typeof WidgetTitle
   Content: typeof Card.Content
   Footer: typeof Card.Footer

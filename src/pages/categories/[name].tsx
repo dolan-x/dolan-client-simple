@@ -12,7 +12,6 @@ import PageSkeleton from '@/components/Widgets/Page.skeleton'
 import PostCardSkeleton from '@/components/Widgets/PostCard.skeleton'
 import PostCard from '@/components/Widgets/PostCardWidget'
 import Layout from '@/components/Layouts'
-import Page from '@/components/Layouts/Page'
 
 import { useCategory, usePost } from '@/lib/hooks'
 import { getCategoryLink } from '@/utils'
@@ -57,31 +56,29 @@ const CategoryPage: FC = () => {
         <title>{name}_Test</title>
       </Head>
       <Layout>
-        <Page>
-          {isLoading
-            ? (
-              <PageSkeleton />
-              )
-            : (
-              <>
-                <Widget>
-                  <Breadcrumbs>
-                    <NextLink href={getCategoryLink()}>
-                      <Breadcrumbs.Item nextLink>{t('categories')}</Breadcrumbs.Item>
-                    </NextLink>
-                    <Breadcrumbs.Item>{category.name}</Breadcrumbs.Item>
-                  </Breadcrumbs>
-                </Widget>
-                {category.posts.map((id) => (
-                  <Post
-                    id={id}
-                    key={id}
-                  />
-                ))}
-              </>
-              )
+        {isLoading
+          ? (
+            <PageSkeleton />
+            )
+          : (
+            <>
+              <Widget>
+                <Breadcrumbs>
+                  <NextLink href={getCategoryLink()}>
+                    <Breadcrumbs.Item nextLink>{t('categories')}</Breadcrumbs.Item>
+                  </NextLink>
+                  <Breadcrumbs.Item>{category.name}</Breadcrumbs.Item>
+                </Breadcrumbs>
+              </Widget>
+              {category.posts.map((id) => (
+                <Post
+                  id={id}
+                  key={id}
+                />
+              ))}
+            </>
+            )
         }
-        </Page>
       </Layout>
     </>
   )
@@ -92,7 +89,7 @@ export default CategoryPage
 export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['categories', 'common']))
+      ...(await serverSideTranslations(locale, ['widgets', 'common']))
     }
   }
 }

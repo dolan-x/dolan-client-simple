@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { User } from '@geist-ui/react'
+import { Text } from '@geist-ui/react'
 
 import Widget from '@/components/Widgets'
 import PostMeta from '@/components/PostData/PostMeta'
@@ -28,36 +28,33 @@ const Article: FC<ArticleProps> = ({
   category,
   pageType = 'post'
 }: ArticleProps) => {
-  const renderAuthors = () => (
-    <div className="text-center mt-6 border-b">
-      {authors.map((author) => (
-        <User
-          className="mb-6"
-          name={author.name}
-          src={author.avatar}
-          text={author.bio}
-          key={author.name}
-        />
-      ))}
-    </div>
-  )
+  const authorNames = authors.map((author) => author.name)
 
   return (
     <>
+      <Widget>
+        <HeadingImage
+          className="-mb-card"
+          title={title}
+          headingImage={headingImage}
+          hoverable={false}
+          roundedBottom
+        />
+      </Widget>
       <PostMeta
-        title={title}
+        authorNames={authorNames}
         timestamp={timestamp}
       />
       <Widget>
+        <div className="text-center">
+          <Text
+            className="font-light"
+            h1
+          >
+            {title}
+          </Text>
+        </div>
         <article>
-          {headingImage && (
-            <HeadingImage
-              hoverable={false}
-              headingImage={headingImage}
-              title={title}
-            />
-          )}
-          {pageType === 'post' && renderAuthors() }
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </article>
         <PostFooter

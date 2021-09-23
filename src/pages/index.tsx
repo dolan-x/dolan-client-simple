@@ -7,22 +7,19 @@ import { useTranslation } from 'next-i18next'
 import { EyeOffIcon } from '@heroicons/react/outline'
 
 import { Post } from '@/lib/types'
-import { usePosts, useSiteProfile } from '@/lib/hooks'
+import { usePosts } from '@/lib/hooks'
 
-import SiteProfile from '@/components/SiteProfile'
 import Widget from '@/components/Widgets'
 import PostCardWidget from '@/components/Widgets/PostCardWidget'
 import PostCardSkeleton from '@/components/Widgets/PostCard.skeleton'
-import SiteProfileSkeleton from '@/components/Widgets/SiteProfile.skeleton'
 import Layout from '@/components/Layouts'
-import Home from '@/components/Layouts/Home'
 
 // Show at bottom
 const Nothing: FC = () => {
   const { t } = useTranslation('home')
 
   return (
-    <Widget className="w-full mt-4">
+    <Widget className="w-full my-4">
       <Widget.Content className="flex justify-center">
         <EyeOffIcon className="w-6 h-6 mr-3" />
         {t('reached-bottom')}
@@ -64,14 +61,6 @@ const IndexPage: FC = () => {
       </>
     )
   }
-  /* Site Profile */
-  const { siteProfile, isLoading: isProfileLoading, isError: isProfileError } = useSiteProfile()
-  const renderSiteProfile = () => {
-    if (isProfileLoading) return <SiteProfileSkeleton />
-    return (
-      <SiteProfile {...siteProfile} />
-    )
-  }
 
   return (
     <>
@@ -79,18 +68,15 @@ const IndexPage: FC = () => {
         <title>Test_Home</title>
       </Head>
       <Layout>
-        <Home>
-          {renderSiteProfile()}
-          <InfiniteScroll
-            dataLength={posts.length}
-            next={() => console.log('next')}
-            hasMore={false}
-            loader={<PostCardSkeleton />}
-            endMessage={<Nothing />}
-          >
-            {renderPostList()}
-          </InfiniteScroll>
-        </Home>
+        <InfiniteScroll
+          dataLength={posts.length}
+          next={() => console.log('next')}
+          hasMore={false}
+          loader={<PostCardSkeleton />}
+          endMessage={<Nothing />}
+        >
+          {renderPostList()}
+        </InfiniteScroll>
       </Layout>
     </>
   )
@@ -101,7 +87,7 @@ export default IndexPage
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['home', 'common']))
+      ...(await serverSideTranslations(locale, ['home', 'widgets', 'common']))
     }
   }
 }

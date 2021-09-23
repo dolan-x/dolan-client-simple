@@ -10,7 +10,6 @@ import { Breadcrumbs } from '@geist-ui/react'
 import Widget from '@/components/Widgets'
 import PageSkeleton from '@/components/Widgets/Page.skeleton'
 import Layout from '@/components/Layouts'
-import Page from '@/components/Layouts/Page'
 
 import { useTag } from '@/lib/hooks'
 import { getTagLink } from '@/utils'
@@ -28,32 +27,30 @@ const TagPage: FC = () => {
         <title>{name}_Test</title>
       </Head>
       <Layout>
-        <Page>
-          {isLoading
-            ? (
-              <PageSkeleton />
-              )
-            : (
-              <>
-                <Widget>
-                  <Breadcrumbs>
-                    <NextLink href={getTagLink()}>
-                      <Breadcrumbs.Item nextLink>{t('tags')}</Breadcrumbs.Item>
-                    </NextLink>
-                    <Breadcrumbs.Item>{name}</Breadcrumbs.Item>
-                  </Breadcrumbs>
-                </Widget>
-                <Widget>
-                  name: {tag.name}
-                  <br />
-                  slug: {tag.slug}
-                  <br />
-                  count: {tag.count}
-                </Widget>
-              </>
-              )
+        {isLoading
+          ? (
+            <PageSkeleton />
+            )
+          : (
+            <>
+              <Widget>
+                <Breadcrumbs>
+                  <NextLink href={getTagLink()}>
+                    <Breadcrumbs.Item nextLink>{t('tags')}</Breadcrumbs.Item>
+                  </NextLink>
+                  <Breadcrumbs.Item>{name}</Breadcrumbs.Item>
+                </Breadcrumbs>
+              </Widget>
+              <Widget>
+                name: {tag.name}
+                <br />
+                slug: {tag.slug}
+                <br />
+                count: {tag.count}
+              </Widget>
+            </>
+            )
         }
-        </Page>
       </Layout>
     </>
   )
@@ -64,7 +61,7 @@ export default TagPage
 export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['tags']))
+      ...(await serverSideTranslations(locale, ['widgets']))
     }
   }
 }

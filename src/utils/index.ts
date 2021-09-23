@@ -56,7 +56,7 @@ export const getLocalTime = (timestamp: number): string => {
  * @param {ReactNode} component
  * @returns {ReactNode | null}
  */
-export const wrapWidget = (isLoading: boolean, component: ReactNode) => {
+export const wrapWidget = (isLoading: boolean, component: ReactNode): ReactNode => {
   if (isLoading) return null
   return component
 }

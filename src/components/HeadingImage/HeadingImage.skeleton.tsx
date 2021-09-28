@@ -9,10 +9,10 @@ const defaultProps = {
   opacity: 0.5
 }
 
-export type ImageSkeletonProps = Props
+export type ImageSkeletonProps = Props & typeof defaultProps
 
 const ImageSkeleton: FC<ImageSkeletonProps> = memo(
-  ({ opacity, ...props }: ImageSkeletonProps & typeof defaultProps) => {
+  ({ opacity = 0.5, ...props }: ImageSkeletonProps) => {
     const theme = useTheme()
     return (
       <div

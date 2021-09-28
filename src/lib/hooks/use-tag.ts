@@ -2,7 +2,7 @@ import useSWR from 'swr'
 
 import { Tag, TagSlug } from '@/lib/types'
 
-interface UseTagResult {
+type UseTagResult = {
   tag: Tag
   isLoading: boolean
   isError: boolean

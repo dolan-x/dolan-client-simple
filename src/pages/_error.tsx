@@ -7,7 +7,7 @@ import { Text } from '@geist-ui/react'
 import Widget from '@/components/Widgets'
 import Layout from '@/components/Layouts'
 
-interface ErrorPageProps {
+type ErrorPageProps = {
   statusCode: number
 }
 const ErrorPage: FC<ErrorPageProps> = ({ statusCode }: ErrorPageProps) => {

@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren } from 'react'
 
-interface PageProps {
+type PageProps = {
 }
 type PagePropsWithChildren = PropsWithChildren<PageProps>
 const Page: FC<PagePropsWithChildren> = ({ children }: PagePropsWithChildren) => {

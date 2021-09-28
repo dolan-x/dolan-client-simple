@@ -14,7 +14,7 @@ const defaultOptions: ToastOptions = {
   progress: undefined
 }
 type OptionsWithDefault = ToastOptions & typeof defaultOptions
-interface ToastOptionsType {
+type ToastOptionsType = {
   text: ReactNode
   options?: OptionsWithDefault
 }

@@ -2,7 +2,7 @@ import { FC, PropsWithChildren, HTMLAttributes } from 'react'
 import NextLink from 'next/link'
 import { Link } from '@geist-ui/react'
 
-interface Props {
+type Props = {
   href?: string
   background?: boolean
 }

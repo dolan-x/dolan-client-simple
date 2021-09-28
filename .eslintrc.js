@@ -159,6 +159,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/triple-slash-reference': 0,
     '@typescript-eslint/no-non-null-assertion': 0,
-    '@typescript-eslint/restrict-template-expressions': 0
+    '@typescript-eslint/restrict-template-expressions': 0,
+    '@typescript-eslint/consistent-type-definitions': ['warn', 'type']
   }
 }

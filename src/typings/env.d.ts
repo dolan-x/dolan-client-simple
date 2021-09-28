@@ -1,5 +1,5 @@
 declare namespace NodeJS {
-  interface ProcessEnv {
+  type ProcessEnv = {
     readonly LC_APP_ID: string
     readonly LC_APP_KEY: string
     readonly LC_MASTER_KEY: string

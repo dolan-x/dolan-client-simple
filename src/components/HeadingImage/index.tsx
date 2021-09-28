@@ -1,7 +1,7 @@
 import { FC, useState, useEffect, useRef } from 'react'
 import HeadingImageSkeleton from './HeadingImage.skeleton'
 
-interface HeadingImageProps {
+type HeadingImageProps = {
   headingImage: string
   title: string
   className?: string

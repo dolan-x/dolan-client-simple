@@ -6,7 +6,7 @@ import TagElement from './Tag'
 import { getTagLink } from '@/utils'
 import { Tag } from '@/lib/types'
 
-interface TagCloudProps {
+type TagCloudProps = {
   tags: Tag[]
 }
 const TagCloud: FC<TagCloudProps> = ({ tags }: TagCloudProps) => {

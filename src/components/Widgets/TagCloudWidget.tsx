@@ -6,7 +6,7 @@ import TagCloud from '@/components/TagCloud'
 
 import { Tag } from '@/lib/types'
 
-interface TagCloudWidgetProps {
+type TagCloudWidgetProps = {
   tags: Tag[]
 }
 const TagCloudWidget: FC<TagCloudWidgetProps> = ({ tags }: TagCloudWidgetProps) => {

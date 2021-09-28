@@ -3,7 +3,7 @@ import { Text } from '@geist-ui/react'
 
 import RoundedImage from '@/components/Shared/RoundedImage'
 
-interface SiteProfileProps {
+type SiteProfileProps = {
   favicon: string
   name: string
   description: string

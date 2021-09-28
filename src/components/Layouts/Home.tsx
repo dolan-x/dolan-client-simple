@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren } from 'react'
 
-interface HomeProps {
+type HomeProps = {
 }
 type HomePropsWithChildren = PropsWithChildren<HomeProps>
 const Home: FC<HomePropsWithChildren> = ({ children }: HomePropsWithChildren) => {

@@ -3,7 +3,7 @@ import { FC } from 'react'
 import Category from './Category'
 import Tags from './Tags'
 
-interface PostFooterProps {
+type PostFooterProps = {
   tags: string[]
   category: string
 }

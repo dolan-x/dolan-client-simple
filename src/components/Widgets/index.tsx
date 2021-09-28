@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { Card, Text, CardProps } from '@geist-ui/react'
 
-interface WidgetTitleProps {
+type WidgetTitleProps = {
   children: string
 }
 const WidgetTitle: FC<WidgetTitleProps> = ({ children }: WidgetTitleProps) => {

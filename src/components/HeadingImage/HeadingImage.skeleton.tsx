@@ -1,7 +1,7 @@
 import { FC, memo } from 'react'
 import { useTheme } from '@geist-ui/react'
 
-interface Props {
+type Props = {
   opacity?: number
 }
 

@@ -2,7 +2,7 @@ import useSWR from 'swr'
 
 import { Post } from '@/lib/types'
 
-interface UsePostsResult {
+type UsePostsResult = {
   posts: Post[]
   isLoading: boolean
   isError: boolean

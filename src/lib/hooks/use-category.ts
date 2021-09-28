@@ -2,7 +2,7 @@ import useSWR from 'swr'
 
 import { Category, CategorySlug } from '@/lib/types'
 
-interface UseCategoryResult {
+type UseCategoryResult = {
   category: Category
   isLoading: boolean
   isError: boolean

@@ -12,7 +12,7 @@ import { Post, PostID } from '@/lib/types'
 import { usePost } from '@/lib/hooks'
 import { getAPILink } from '@/utils'
 
-interface PostPageProps {
+type PostPageProps = {
   id: PostID
   data: Post
 }

@@ -23,5 +23,5 @@
     }
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", ".eslintrc.js"]
+  "include": ["./src/typings/**/*.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", ".eslintrc.js"]
 }

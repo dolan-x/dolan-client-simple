@@ -87,7 +87,7 @@ export default IndexPage
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale!, ['home', 'widgets', 'common']))
+      ...(await serverSideTranslations(locale, ['home', 'widgets', 'common']))
     }
   }
 }

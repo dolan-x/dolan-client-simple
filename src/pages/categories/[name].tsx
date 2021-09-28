@@ -89,7 +89,7 @@ export default CategoryPage
 export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale!, ['widgets', 'common']))
+      ...(await serverSideTranslations(locale, ['widgets', 'common']))
     }
   }
 }

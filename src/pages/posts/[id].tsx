@@ -64,7 +64,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query, locale }) 
     props: {
       id,
       data,
-      ...(await serverSideTranslations(locale!, ['home', 'widgets', 'common']))
+      ...(await serverSideTranslations(locale, ['home', 'widgets', 'common']))
     }
   }
 }

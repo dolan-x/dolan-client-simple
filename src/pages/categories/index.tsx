@@ -35,7 +35,7 @@ export default CategoriesPage
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale!, ['widgets']))
+      ...(await serverSideTranslations(locale, ['widgets']))
     }
   }
 }

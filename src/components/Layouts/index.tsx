@@ -10,7 +10,7 @@ const Layout: FC = ({ children }) => {
       <Header />
       <div className="m-4 pt-24">
         <div className="flex mx-auto max-w-5xl flex-wrap lg:flex-nowrap">
-          <div className="float-left w-full lg:w-main pl-0 lg:pl-4 lg:order-2">
+          <div className="float-left w-full lg:w-main pr-0 lg:pr-4">
             {children}
           </div>
           <Aside />

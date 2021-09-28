@@ -8,7 +8,7 @@ import HeadingImage from '@/components/HeadingImage'
 
 import { Author } from '@/lib/types'
 
-type ArticleProps = {
+interface ArticleProps {
   headingImage?: string
   title: string
   timestamp: number

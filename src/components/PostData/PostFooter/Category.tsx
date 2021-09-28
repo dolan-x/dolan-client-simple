@@ -5,7 +5,7 @@ import Badge from '@/components/Shared/Badge'
 
 import { getCategoryLink } from '@/utils'
 
-type CategoryProps = {
+interface CategoryProps {
   category: string
 }
 const Category: FC<CategoryProps> = ({ category }: CategoryProps) => {

@@ -6,10 +6,10 @@ import {
 } from '@/lib/types'
 
 abstract class Base {
-  abstract getPosts(): Post[]
-  abstract getPost(id: PostID): Post
-  abstract getTags(): Tag[]
-  abstract getTag(slug: TagSlug): Tag
+  abstract getPosts (): Post[]
+  abstract getPost (id: PostID): Post
+  abstract getTags (): Tag[]
+  abstract getTag (slug: TagSlug): Tag
 }
 
 export default Base

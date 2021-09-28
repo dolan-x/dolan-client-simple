@@ -5,7 +5,7 @@ import Badge from '@/components/Shared/Badge'
 
 import { getTagLink } from '@/utils'
 
-type TagsProps = {
+interface TagsProps {
   tags: string[]
 }
 const Tags: FC<TagsProps> = ({ tags }: TagsProps) => {

@@ -12,7 +12,7 @@ import { Post, PostID } from '@/lib/types'
 import { usePost } from '@/lib/hooks'
 import { getAPILink } from '@/utils'
 
-type PostPageProps = {
+interface PostPageProps {
   id: PostID
   data: Post
 }
@@ -64,7 +64,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query, locale }) 
     props: {
       id,
       data,
-      ...(await serverSideTranslations(locale, ['home', 'widgets', 'common']))
+      ...(await serverSideTranslations(locale!, ['home', 'widgets', 'common']))
     }
   }
 }

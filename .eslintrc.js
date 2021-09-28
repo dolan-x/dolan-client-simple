@@ -6,7 +6,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
-    'standard'
+    '@qwp/standard-with-typescript'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -14,7 +14,8 @@ module.exports = {
       jsx: true
     },
     ecmaVersion: 12,
-    sourceType: 'module'
+    sourceType: 'module',
+    project: './tsconfig.json'
   },
   plugins: ['react', 'react-hooks', '@typescript-eslint', 'node', 'promise'],
   settings: {
@@ -151,6 +152,13 @@ module.exports = {
     'react/jsx-space-before-closing': ['warn', 'always'],
     'react/jsx-pascal-case': 'warn',
     'react/jsx-first-prop-new-line': ['warn', 'multiline'],
-    'import/no-anonymous-default-export': 0
+    'import/no-anonymous-default-export': 0,
+    '@typescript-eslint/no-misused-new': 'warn',
+    '@typescript-eslint/comma-spacing': 'warn',
+    '@typescript-eslint/strict-boolean-expressions': 0,
+    '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/triple-slash-reference': 0,
+    '@typescript-eslint/no-non-null-assertion': 0,
+    '@typescript-eslint/restrict-template-expressions': 0
   }
 }

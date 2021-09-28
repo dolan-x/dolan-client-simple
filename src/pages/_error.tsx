@@ -7,7 +7,7 @@ import { Text } from '@geist-ui/react'
 import Widget from '@/components/Widgets'
 import Layout from '@/components/Layouts'
 
-type ErrorPageProps = {
+interface ErrorPageProps {
   statusCode: number
 }
 const ErrorPage: FC<ErrorPageProps> = ({ statusCode }: ErrorPageProps) => {
@@ -38,7 +38,7 @@ export default ErrorPage
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common']))
+      ...(await serverSideTranslations(locale!, ['common']))
     }
   }
 }

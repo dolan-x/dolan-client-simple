@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic'
 
 import Widget from '.'
 
-const ContentLoader = dynamic(() => import('react-content-loader'))
+const ContentLoader = dynamic(async () => await import('react-content-loader'))
 
 const PostCardSkeleton: FC = (props) => (
   <div className="w-full text-center">

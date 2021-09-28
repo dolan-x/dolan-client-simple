@@ -17,8 +17,8 @@ const PostMetaItem: FC = ({ children }) => {
   )
 }
 
-type PostMetaProps = {
-  authorNames: Author['name'][]
+interface PostMetaProps {
+  authorNames: Array<Author['name']>
   timestamp: Post['timestamp']
 }
 const PostMeta: FC<PostMetaProps> = ({ authorNames, timestamp }: PostMetaProps) => {

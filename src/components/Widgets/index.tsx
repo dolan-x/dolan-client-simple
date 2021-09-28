@@ -1,10 +1,10 @@
 import { FC } from 'react'
 import { Card, Text, CardProps } from '@geist-ui/react'
 
-type WidgetTitleProps = {
+interface WidgetTitleProps {
   children: string
 }
-const WidgetTitle: FC<WidgetTitleProps> = ({ children }:WidgetTitleProps) => {
+const WidgetTitle: FC<WidgetTitleProps> = ({ children }: WidgetTitleProps) => {
   return (
     <Text className="text-widget-title text-sm mb-2 tracking-widest uppercase">
       {children}

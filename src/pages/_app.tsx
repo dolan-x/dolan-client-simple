@@ -10,7 +10,7 @@ import BackToTop from '@/components/BackToTop'
 import { fetcher } from '@/lib/fetcher'
 
 import 'inter-ui/inter.css'
-import '@/styles/tailwind.css'
+import '@/styles/windi.css'
 import '@/styles/global.css'
 
 const MyApp: NextPage<AppProps> = ({ Component, pageProps }: AppProps) => {

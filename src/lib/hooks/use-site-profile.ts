@@ -2,7 +2,7 @@ import useSWR from 'swr'
 
 import { SiteProfile } from '@/lib/types'
 
-type UseSiteProfileResult = {
+interface UseSiteProfileResult {
   siteProfile: SiteProfile
   isLoading: boolean
   isError: boolean

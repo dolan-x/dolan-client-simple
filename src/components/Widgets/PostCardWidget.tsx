@@ -10,7 +10,7 @@ import Widget from '.'
 import { Post } from '@/lib/types'
 import { getPostLink } from '@/utils'
 
-type PostCardWidgetProps = {
+interface PostCardWidgetProps {
   title: string
   excerpt: string
   postID: string

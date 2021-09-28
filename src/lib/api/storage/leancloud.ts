@@ -10,7 +10,7 @@ import {
 } from '@/lib/types'
 import Base from './base'
 
-type Config = {
+interface Config {
   readonly LC_APP_ID: string
   readonly LC_APP_KEY: string
   readonly LC_MASTER_KEY: string

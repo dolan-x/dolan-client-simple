@@ -4,7 +4,7 @@ import { toast as _toast, ToastPosition, ToastOptions } from 'react-toastify'
 type Toasts = 'default' | 'success' | 'error' | 'warn' | 'info'
 const defaultToastType = 'default' as Toasts
 type ToastType = Toasts & typeof defaultToastType
-const defaultOptions = {
+const defaultOptions: ToastOptions = {
   position: 'bottom-right' as ToastPosition,
   autoClose: 5000,
   hideProgressBar: false,
@@ -12,9 +12,9 @@ const defaultOptions = {
   pauseOnHover: true,
   draggable: false,
   progress: undefined
-} as ToastOptions
+}
 type OptionsWithDefault = ToastOptions & typeof defaultOptions
-type ToastOptionsType = {
+interface ToastOptionsType {
   text: ReactNode
   options?: OptionsWithDefault
 }

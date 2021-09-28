@@ -2,7 +2,7 @@ import { FC, PropsWithChildren } from 'react'
 import NextLink from 'next/link'
 import { Button, Link } from '@geist-ui/react'
 
-type NavItemProps = {
+interface NavItemProps {
   href: string
 }
 type NavItemPropsWithChildren = PropsWithChildren<NavItemProps>

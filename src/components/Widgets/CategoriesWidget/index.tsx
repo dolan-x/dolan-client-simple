@@ -6,7 +6,7 @@ import CategoryItem from './CategoryItem'
 
 import { Category } from '@/lib/types'
 
-type CategoriesWidgetProps = {
+interface CategoriesWidgetProps {
   categories: Category[]
 }
 const TagCloudWidget: FC<CategoriesWidgetProps> = ({ categories }: CategoriesWidgetProps) => {

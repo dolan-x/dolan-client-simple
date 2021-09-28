@@ -32,7 +32,7 @@ const Nothing: FC = () => {
 const IndexPage: FC = () => {
   /* Post List */
   const data = usePosts()
-  const posts = data.posts ? [].concat(...data.posts) : []
+  const posts = data.posts ? [...data.posts] : []
   const renderPostList = () => {
     if (data.isLoading) return <PostCardSkeleton />
     return (
@@ -87,7 +87,7 @@ export default IndexPage
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['home', 'widgets', 'common']))
+      ...(await serverSideTranslations(locale!, ['home', 'widgets', 'common']))
     }
   }
 }

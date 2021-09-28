@@ -1,4 +1,4 @@
-export type Author = {
+export interface Author {
   name: string
   avatar: string
   bio?: string
@@ -8,7 +8,7 @@ export type PostID = string & { readonly brand: unique symbol }
 export type TagSlug = string & { readonly brand: unique symbol }
 export type CategorySlug = string & { readonly brand: unique symbol }
 
-export type Post = {
+export interface Post {
   title: {
     rendered: string
   }
@@ -32,7 +32,7 @@ export type Post = {
     prev?: [
       number,
       string
-    ],
+    ]
     next?: [
       number,
       string
@@ -40,20 +40,20 @@ export type Post = {
   }
 }
 
-export type Tag = {
+export interface Tag {
   name: string
   slug: string
   count: number
 }
 
-export type Category = {
+export interface Category {
   name: string
   slug: string
   count: number
   posts: PostID[]
 }
 
-export type SiteProfile = {
+export interface SiteProfile {
   favicon: string
   name: string
   description: string

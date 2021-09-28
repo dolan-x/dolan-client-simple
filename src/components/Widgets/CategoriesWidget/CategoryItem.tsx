@@ -4,7 +4,7 @@ import { Link } from '@geist-ui/react'
 
 import { getCategoryLink } from '@/utils'
 
-type CategoryItemProps = {
+interface CategoryItemProps {
   name: string
   count: number
 }

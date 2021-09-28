@@ -7,15 +7,15 @@ import {
 } from '@/lib/hooks'
 import { wrapWidget } from '@/utils'
 
-const CategoriesWidget = dynamic(() => import('@/components/Widgets/CategoriesWidget'))
-const TagCloudWidget = dynamic(() => import('@/components/Widgets/TagCloudWidget'))
+const CategoriesWidget = dynamic(async () => await import('@/components/Widgets/CategoriesWidget'))
+const TagCloudWidget = dynamic(async () => await import('@/components/Widgets/TagCloudWidget'))
 
 const Aside: FC = () => {
   const { categories, isLoading: isCategoriesLoading, isError: isCategoriesError } = useCategories()
   const { tags, isLoading: isTagsLoading, isError: isTagsError } = useTags()
 
   return (
-    <aside className="flex flex-col lg:order-1 w-full lg:w-aside">
+    <aside className="flex flex-col w-full lg:w-aside">
       {wrapWidget(isCategoriesLoading, <CategoriesWidget categories={categories} />)}
       {wrapWidget(isTagsLoading, <TagCloudWidget tags={tags} />)}
     </aside>

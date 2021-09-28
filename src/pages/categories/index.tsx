@@ -18,13 +18,13 @@ const CategoriesPage: FC = () => {
         <title>Categories_Test</title>
       </Head>
       <Layout>
-          {isLoading
-            ? (
-              <PageSkeleton />
-              )
-            : (
-              <CategoriesWidget categories={categories} />
-              )}
+        {isLoading
+          ? (
+            <PageSkeleton />
+            )
+          : (
+            <CategoriesWidget categories={categories} />
+            )}
       </Layout>
     </>
   )
@@ -35,7 +35,7 @@ export default CategoriesPage
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['widgets']))
+      ...(await serverSideTranslations(locale!, ['widgets']))
     }
   }
 }

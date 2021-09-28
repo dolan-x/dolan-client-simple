@@ -5,7 +5,7 @@ import Widget from '.'
 
 import { SupportedCommentSystems } from '@/lib/types'
 
-type Props = {
+interface Props {
   type: SupportedCommentSystems
 }
 type NativeAttrs = Omit<HTMLAttributes<any>, keyof Props>

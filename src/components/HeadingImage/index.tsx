@@ -1,7 +1,7 @@
 import { FC, useState, useEffect, useRef } from 'react'
 import HeadingImageSkeleton from './HeadingImage.skeleton'
 
-type HeadingImageProps = {
+interface HeadingImageProps {
   headingImage: string
   title: string
   className?: string
@@ -20,7 +20,7 @@ const HeadingImage: FC<HeadingImageProps> = ({
   const [showSkeleton, setShowSkeleton] = useState<boolean>(true)
   const imageRef = useRef<HTMLImageElement>(null)
 
-  const imageLoaded = () => {
+  const imageLoaded = (): void => {
     setLoading(false)
   }
 

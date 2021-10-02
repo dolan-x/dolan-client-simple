@@ -1,11 +1,13 @@
 import { FC } from 'react'
 import dynamic from 'next/dynamic'
 
+import AsideWidgetSkeleton from './AsideWidget.skeleton'
+
 import {
   useCategories,
   useTags
 } from '@/lib/hooks'
-import { wrapWidget } from '@/utils'
+import { wrapLoadingWidget } from '@/utils'
 
 const CategoriesWidget = dynamic(async () => await import('@/components/Widgets/CategoriesWidget'))
 const TagCloudWidget = dynamic(async () => await import('@/components/Widgets/TagCloudWidget'))
@@ -16,8 +18,9 @@ const Aside: FC = () => {
 
   return (
     <aside className="flex flex-col w-full lg:w-aside">
-      {wrapWidget(isCategoriesLoading, <CategoriesWidget categories={categories} />)}
-      {wrapWidget(isTagsLoading, <TagCloudWidget tags={tags} />)}
+      {wrapLoadingWidget(isCategoriesLoading, <CategoriesWidget categories={categories} />, <AsideWidgetSkeleton />)}
+      {wrapLoadingWidget(isTagsLoading, <TagCloudWidget tags={tags} />, <AsideWidgetSkeleton />)}
+      <AsideWidgetSkeleton />
     </aside>
   )
 }

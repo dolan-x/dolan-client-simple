@@ -58,7 +58,7 @@ const PostCardWidget: FC<PostCardWidgetProps> = ({
       {/* Meta */}
       <Widget.Footer>
         <div className="flex w-full flex-wrap justify-between items-center">
-          <Avatar.Group className="pl-3">
+          <Avatar.Group className="!pl-3">
             {authors.map((author) => (
               <Avatar
                 src={author.avatar}
@@ -79,9 +79,9 @@ const PostCardWidget: FC<PostCardWidgetProps> = ({
               href={link}
               passHref
             >
-              <Link className="items-center">
+              <Link className="!items-center">
                 {t('read-more')}
-                <ArrowRightIcon className="w-5 h-5 -mr-3" />
+                <ArrowRightIcon className="w-5 h-5 !-mr-3" />
               </Link>
             </NextLink>
           </Button>

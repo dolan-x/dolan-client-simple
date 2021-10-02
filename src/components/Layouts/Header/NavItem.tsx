@@ -14,7 +14,7 @@ const NavItem: FC<NavItemPropsWithChildren> = ({ href, children }: NavItemPropsW
     >
       <Link>
         <Button
-          className="min-w-0 hover:bg-gray-100"
+          className="!min-w-0 !hover:bg-gray-100"
           type="abort"
         >
           {children}

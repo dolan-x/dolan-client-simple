@@ -1,10 +1,14 @@
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
-  important: true,
   extract: {
     include: [
-      './src/**/*.{js,ts,jsx,tsx}'
+      '**/*.{tsx,css}'
+    ],
+    exclude: [
+      'node_modules',
+      '.git',
+      '.next'
     ]
   },
   darkMode: false, // or 'media' or 'class'

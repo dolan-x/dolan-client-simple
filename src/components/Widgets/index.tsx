@@ -14,11 +14,12 @@ const WidgetTitle: FC<WidgetTitleProps> = ({ children }: WidgetTitleProps) => {
 
 type WidgetProps = CardProps & {
   sticky?: boolean
+  rounded?: boolean
 }
-const Widget: FC<WidgetProps> = ({ className = '', children, sticky = false, ...props }: WidgetProps) => {
+const Widget: FC<WidgetProps> = ({ className = '', children, sticky = false, rounded = true, ...props }: WidgetProps) => {
   return (
     <Card
-      className={`mb-4 shadow-widget rounded-lg border-none ${sticky ? 'sticky' : ''} ${className}`}
+      className={`!mb-4 !shadow-widget !border-none ${rounded ? '!rounded-lg' : ''} ${sticky ? 'sticky' : ''} ${className}`}
       {...props}
     >
       {children}

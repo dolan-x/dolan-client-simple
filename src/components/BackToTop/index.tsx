@@ -1,7 +1,8 @@
 import { FC, useState, useEffect } from 'react'
 import ScrollToTop from 'react-scroll-up'
-import { Card } from '@geist-ui/react'
 import { ArrowCircleUpIcon } from '@heroicons/react/outline'
+
+import Widget from '../Widgets'
 
 const BackToTop: FC = () => {
   const [showAfterRender, setShowAfterRender] = useState<boolean>(false)
@@ -16,11 +17,14 @@ const BackToTop: FC = () => {
         transform: 'scale(.75)'
       }}
     >
-      <Card
-        className="shadow-md rounded-full transform"
+      <Widget
+        className="shadow-md transform !rounded-full"
+        rounded={false}
       >
-        <ArrowCircleUpIcon className="w-7 h-7" />
-      </Card>
+        <Widget.Content className="flex">
+          <ArrowCircleUpIcon className="w-7 h-7" />
+        </Widget.Content>
+      </Widget>
     </ScrollToTop>
   )
 }

@@ -41,7 +41,7 @@ const HeadingImage: FC<HeadingImageProps> = ({
           onLoad={imageLoaded}
           src={headingImage}
           alt={title}
-          className={`${roundedBottom ? 'rounded-lg' : 'rounded-t-lg'} ${hoverable && 'transition duration-1000 ease-in-out transform hover:scale-110'}`}
+          className={`${roundedBottom ? 'rounded-lg' : 'rounded-t-lg'} ${hoverable ? 'transition duration-1000 ease-in-out transform hover:scale-110' : ''}`}
         />
       </div>
     </div>

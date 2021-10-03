@@ -1,5 +1,7 @@
 import { ReactNode } from 'react'
 
+import { SupportedLocales } from '@/lib/types'
+
 /**
  * Receives a string,
  * returns an API URL.
@@ -46,8 +48,11 @@ export const getWordCount = (content: string): number => {
  * @param {number} timestamp
  * @returns {string}
  */
-export const getLocalTime = (timestamp: number): string => {
-  return new Date(timestamp).toLocaleString().replace(/:\d{1,2}$/, ' ')
+export const getLocalTime = (timestamp: number, locale?: SupportedLocales): string => {
+  return new Date(timestamp)
+    .toLocaleString(locale || undefined)
+    .replace(/:\d{1,2}$/, ' ')
+    .replace(/\//g, ' · ')
 }
 /**
  * Wraps the component.

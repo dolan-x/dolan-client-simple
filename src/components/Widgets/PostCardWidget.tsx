@@ -35,7 +35,7 @@ const PostCardWidget: FC<PostCardWidgetProps> = ({
           href={link}
           passHref
         >
-          <Link className="w-full">
+          <Link className="!w-full">
             <HeadingImage
               hoverable
               title={title}

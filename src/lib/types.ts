@@ -60,3 +60,5 @@ export type SiteProfile = {
 }
 
 export type SupportedCommentSystems = 'waline' | 'twikoo' | 'disqus' | 'livere' | 'gitalk'
+
+export type SupportedLocales = 'en' | 'zh-Hans'

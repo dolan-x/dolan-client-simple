@@ -17,7 +17,7 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <GeistProvider>
-        <SWRConfig value={{ fetcher: fetcher }}>
+        <SWRConfig value={{ fetcher }}>
           <CssBaseline />
           <NextNProgress
             color="#000000"

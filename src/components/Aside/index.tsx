@@ -20,7 +20,6 @@ const Aside: FC = () => {
     <aside className="flex flex-col w-full lg:w-aside">
       {wrapLoadingWidget(isCategoriesLoading, <CategoriesWidget categories={categories} />, <AsideWidgetSkeleton />)}
       {wrapLoadingWidget(isTagsLoading, <TagCloudWidget tags={tags} />, <AsideWidgetSkeleton />)}
-      <AsideWidgetSkeleton />
     </aside>
   )
 }

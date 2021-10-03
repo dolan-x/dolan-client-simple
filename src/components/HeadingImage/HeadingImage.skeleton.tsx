@@ -5,7 +5,7 @@ type Props = {
   opacity?: number
 }
 
-const defaultProps = {
+const defaultProps: Props = {
   opacity: 0.5
 }
 

@@ -28,7 +28,7 @@ class LeanCloudStorageAPI extends Base {
     LeanCloudStorageAPI.initialized = true
   }
 
-  init () {
+  init (): void {
     const {
       LC_APP_ID,
       LC_APP_KEY,

@@ -8,6 +8,7 @@ import { SupportedCommentSystems } from '@/lib/types'
 type Props = {
   type: SupportedCommentSystems
 }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type NativeAttrs = Omit<HTMLAttributes<any>, keyof Props>
 type CommentsProps = Props & NativeAttrs
 const Comments: FC<CommentsProps> = ({ type, ...props }: CommentsProps) => {

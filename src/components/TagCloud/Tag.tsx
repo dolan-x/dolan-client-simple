@@ -8,11 +8,12 @@ type Props = {
   href: string
   backgroundColor: string
 }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type NativeAttrs = Omit<HTMLAttributes<any>, keyof Props>
 type TagProps = Props & NativeAttrs
 
 const Tag: FC<TagProps> = ({ name, href, count, backgroundColor, className = '', ...props }: TagProps) => {
-  const getClasses = () => 'rounded text-xs inline-block px-2 py-1'
+  const getClasses = (): string => 'rounded text-xs inline-block px-2 py-1'
 
   return (
     <div

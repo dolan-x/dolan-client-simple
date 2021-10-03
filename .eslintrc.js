@@ -100,13 +100,6 @@ module.exports = {
       }
     ],
     'no-unused-labels': 'warn',
-    'no-unused-vars': [
-      'warn',
-      {
-        args: 'none',
-        ignoreRestSiblings: true
-      }
-    ],
     'no-use-before-define': [
       'warn',
       {

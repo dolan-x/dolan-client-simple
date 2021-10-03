@@ -28,7 +28,7 @@ const PostCardWidget: FC<PostCardWidgetProps> = ({
   const link = useMemo(() => getPostLink(postID), [postID])
 
   return (
-    <Widget className="w-full px-0 ">
+    <Widget className="w-full px-0">
       {/* Heading Image */}
       {postMetas.headingImage && (
         <NextLink

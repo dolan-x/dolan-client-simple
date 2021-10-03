@@ -3,28 +3,29 @@ import { GetServerSideProps } from 'next'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { Breadcrumbs } from '@geist-ui/react'
 
 import Widget from '@/components/Widgets'
 import PageSkeleton from '@/components/Widgets/Page.skeleton'
+import Post from '@/components/Utils/Post'
 import Layout from '@/components/Layouts'
 
-import { useTag } from '@/lib/hooks'
-import { getTagLink } from '@/utils'
-import { TagSlug } from '@/lib/types'
+import { useCategory } from '@/lib/hooks'
+import { getCategoryLink } from '@/utils'
+import { CategorySlug } from '@/lib/types'
 
-const TagPage: FC = () => {
+const CategoryPage: FC = () => {
   const router = useRouter()
-  const { name } = router.query
-  const { tag, isLoading, isError } = useTag(name as TagSlug)
+  const { slug } = router.query
+  const { category, isLoading, isError } = useCategory(slug as CategorySlug)
   const { t } = useTranslation('widgets')
 
   return (
     <>
       <Head>
-        <title>{name}_Test</title>
+        <title>{slug}_Test</title>
       </Head>
       <Layout>
         {isLoading
@@ -35,19 +36,18 @@ const TagPage: FC = () => {
             <>
               <Widget>
                 <Breadcrumbs>
-                  <NextLink href={getTagLink()}>
-                    <Breadcrumbs.Item nextLink>{t('tags')}</Breadcrumbs.Item>
+                  <NextLink href={getCategoryLink()}>
+                    <Breadcrumbs.Item nextLink>{t('categories')}</Breadcrumbs.Item>
                   </NextLink>
-                  <Breadcrumbs.Item>{name}</Breadcrumbs.Item>
+                  <Breadcrumbs.Item>{category.name}</Breadcrumbs.Item>
                 </Breadcrumbs>
               </Widget>
-              <Widget>
-                name: {tag.name}
-                <br />
-                slug: {tag.slug}
-                <br />
-                count: {tag.count}
-              </Widget>
+              {category.posts.map((id) => (
+                <Post
+                  id={id}
+                  key={id}
+                />
+              ))}
             </>
             )
         }
@@ -56,12 +56,12 @@ const TagPage: FC = () => {
   )
 }
 
-export default TagPage
+export default CategoryPage
 
 export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['widgets']))
+      ...(await serverSideTranslations(locale, ['widgets', 'common']))
     }
   }
 }

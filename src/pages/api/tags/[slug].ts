@@ -5,5 +5,10 @@ export default (req: NextApiRequest, res: NextApiResponse): void => {
 
   res
     .status(200)
-    .json({ name: slug, slug, count: 1 })
+    .json({
+      name: slug,
+      slug,
+      count: 1,
+      posts: ['1']
+    })
 }

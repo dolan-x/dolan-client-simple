@@ -9,7 +9,7 @@ export default (req: NextApiRequest, res: NextApiResponse): void => {
         slug: 'ts',
         count: 114514,
         posts: [
-          1
+          '1'
         ]
       },
       {
@@ -17,7 +17,7 @@ export default (req: NextApiRequest, res: NextApiResponse): void => {
         slug: 'writing',
         count: 1919810,
         posts: [
-          2
+          '2'
         ]
       }
     ])

@@ -44,6 +44,7 @@ export type Tag = {
   name: string
   slug: string
   count: number
+  posts: PostID[]
 }
 
 export type Category = {

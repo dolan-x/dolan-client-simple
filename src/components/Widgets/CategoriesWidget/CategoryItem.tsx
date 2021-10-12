@@ -9,7 +9,7 @@ type CategoryItemProps = {
   count: number
 }
 
-const CategoryItem: FC<CategoryItemProps> = ({ name, count }: CategoryItemProps) => {
+const CategoryItem: FC<CategoryItemProps> = ({ name, count }) => {
   return (
     <div className="p-2 rounded-sm hover:bg-gray-100 transition">
       <NextLink

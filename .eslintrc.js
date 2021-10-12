@@ -1,4 +1,8 @@
-module.exports = {
+/* eslint-disable @typescript-eslint/no-var-requires */
+// @ts-check
+const { defineConfig } = require('eslint-define-config')
+
+module.exports = defineConfig({
   env: {
     browser: true,
     es2021: true
@@ -17,9 +21,17 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json'
   },
-  plugins: ['react', 'react-hooks', '@typescript-eslint', 'node', 'promise'],
+  plugins: [
+    'react',
+    'react-hooks',
+    '@typescript-eslint',
+    'node',
+    'promise'
+  ],
   settings: {
-    'import/core-modules': ['styled-jsx/css']
+    'import/core-modules': [
+      'styled-jsx/css'
+    ]
   },
   rules: {
     'array-callback-return': 'warn',
@@ -141,18 +153,18 @@ module.exports = {
       }
     ],
     'react/jsx-closing-bracket-location': ['warn', 'line-aligned'],
-    'react/jsx-closing-tag-location': 0,
+    'react/jsx-closing-tag-location': 'off',
     'react/jsx-space-before-closing': ['warn', 'always'],
     'react/jsx-pascal-case': 'warn',
     'react/jsx-first-prop-new-line': ['warn', 'multiline'],
-    'import/no-anonymous-default-export': 0,
+    'import/no-anonymous-default-export': 'off',
     '@typescript-eslint/no-misused-new': 'warn',
     '@typescript-eslint/comma-spacing': 'warn',
-    '@typescript-eslint/strict-boolean-expressions': 0,
+    '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
-    '@typescript-eslint/triple-slash-reference': 0,
-    '@typescript-eslint/no-non-null-assertion': 0,
-    '@typescript-eslint/restrict-template-expressions': 0,
+    '@typescript-eslint/triple-slash-reference': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/restrict-template-expressions': 'off',
     '@typescript-eslint/consistent-type-definitions': ['warn', 'type']
   }
-}
+})

@@ -8,7 +8,7 @@ type PostFooterProps = {
   category: string
 }
 
-const PostFooter: FC<PostFooterProps> = ({ tags, category }: PostFooterProps) => {
+const PostFooter: FC<PostFooterProps> = ({ tags, category }) => {
   return (
     <>
       <div className="flex flex-nowrap">

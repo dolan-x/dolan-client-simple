@@ -9,7 +9,7 @@ import { Tag } from '@/lib/types'
 type TagCloudProps = {
   tags: Tag[]
 }
-const TagCloud: FC<TagCloudProps> = ({ tags }: TagCloudProps) => {
+const TagCloud: FC<TagCloudProps> = ({ tags }) => {
   const generateRandomColor = (): string => randomColor({ luminosity: 'light' })
 
   return (

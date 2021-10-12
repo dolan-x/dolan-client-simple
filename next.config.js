@@ -5,6 +5,10 @@ const WindiCSS = require('windicss-webpack-plugin').default
 const { i18n } = require('./next-i18next.config')
 
 const plugins = [withTM]
+
+/**
+ * @type {import('next').NextConfig}
+ **/
 const config = {
   i18n,
   reactStrictMode: true,

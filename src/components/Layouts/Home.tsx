@@ -3,7 +3,7 @@ import { FC, PropsWithChildren } from 'react'
 type HomeProps = {
 }
 type HomePropsWithChildren = PropsWithChildren<HomeProps>
-const Home: FC<HomePropsWithChildren> = ({ children }: HomePropsWithChildren) => {
+const Home: FC<HomePropsWithChildren> = ({ children }) => {
   return (
     <div>
       <main className="w-full min-h-main h-auto mx-auto pt-20 px-5 lg:(w-home px-1)">

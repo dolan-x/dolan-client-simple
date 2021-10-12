@@ -8,7 +8,7 @@ type SiteProfileProps = {
   name: string
   description: string
 }
-const SiteProfile: FC<SiteProfileProps> = ({ favicon, name, description }: SiteProfileProps) => {
+const SiteProfile: FC<SiteProfileProps> = ({ favicon, name, description }) => {
   return (
     <div className="flex items-center pb-4">
       <RoundedImage

@@ -6,7 +6,10 @@ import PostCardSkeleton from '@/components/Aside/AsideWidget.skeleton'
 import { PostID } from '@/lib/types'
 import { usePost } from '@/lib/hooks'
 
-const Post: FC<{ id: PostID }> = ({ id }) => {
+type PostProps = {
+  id: PostID
+}
+const Post: FC<PostProps> = ({ id }) => {
   const {
     post,
     isLoading,

@@ -17,7 +17,7 @@ type PostPageProps = {
   data: Post
 }
 
-const PostPage: FC<PostPageProps> = ({ id, data }: PostPageProps) => {
+const PostPage: FC<PostPageProps> = ({ id, data }) => {
   const { post } = usePost(id, data)
   const {
     postMetas,

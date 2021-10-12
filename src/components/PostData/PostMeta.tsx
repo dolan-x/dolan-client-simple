@@ -21,7 +21,7 @@ type PostMetaProps = {
   authorNames: Array<Author['name']>
   timestamp: Post['timestamp']
 }
-const PostMeta: FC<PostMetaProps> = ({ authorNames, timestamp }: PostMetaProps) => {
+const PostMeta: FC<PostMetaProps> = ({ authorNames, timestamp }) => {
   const timeString = useMemo(() => getLocalTime(timestamp), [timestamp])
 
   return (

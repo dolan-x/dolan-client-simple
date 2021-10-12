@@ -532,6 +532,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/eslint@npm:^7.28.1":
+  version: 7.28.1
+  resolution: "@types/eslint@npm:7.28.1"
+  dependencies:
+    "@types/estree": "*"
+    "@types/json-schema": "*"
+  checksum: 16086d00c2f56b16471fd02c2b495b07e3b84b57113fe34d94b57fb9fc0a5a85f6b87d787051f5d6acb859f6addda9b1e747d1a83ee08cac330d0f26c357fb9e
+  languageName: node
+  linkType: hard
+
+"@types/estree@npm:*":
+  version: 0.0.50
+  resolution: "@types/estree@npm:0.0.50"
+  checksum: 9a2b6a4a8c117f34d08fbda5e8f69b1dfb109f7d149b60b00fd7a9fb6ac545c078bc590aa4ec2f0a256d680cf72c88b3b28b60c326ee38a7bc8ee1ee95624922
+  languageName: node
+  linkType: hard
+
 "@types/hoist-non-react-statics@npm:^3.3.1":
   version: 3.3.1
   resolution: "@types/hoist-non-react-statics@npm:3.3.1"
@@ -551,7 +568,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/json-schema@npm:^7.0.7":
+"@types/json-schema@npm:*, @types/json-schema@npm:^7.0.7":
   version: 7.0.9
   resolution: "@types/json-schema@npm:7.0.9"
   checksum: 259d0e25f11a21ba5c708f7ea47196bd396e379fddb79c76f9f4f62c945879dc21657904914313ec2754e443c5018ea8372362f323f30e0792897fdb2098a705
@@ -2196,6 +2213,7 @@ __metadata:
     "@geist-ui/react": ^2.2.0
     "@heroicons/react": ^1.0.4
     "@qwp/eslint-config-standard-with-typescript": ^21.0.4
+    "@types/eslint": ^7.28.1
     "@types/node": ^16.9.6
     "@types/react": ^17.0.24
     "@typescript-eslint/eslint-plugin": ^4.31.2
@@ -2206,6 +2224,7 @@ __metadata:
     babel-plugin-import: ^1.13.3
     cross-env: ^7.0.3
     eslint: ^7.32.0
+    eslint-define-config: ^1.1.1
     eslint-plugin-import: ^2.24.2
     eslint-plugin-node: ^11.1.0
     eslint-plugin-promise: ^5.1.0
@@ -2227,6 +2246,7 @@ __metadata:
     react: ^17.0.2
     react-content-loader: ^6.0.3
     react-dom: ^17.0.2
+    react-if: ^4.1.1
     react-infinite-scroll-component: ^6.1.0
     react-scroll-up: ^1.3.7
     react-toastify: ^8.0.2
@@ -2475,6 +2495,13 @@ __metadata:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-promise: ^4.2.1 || ^5.0.0
   checksum: 6ae193634f289ae95dbbf2291dc1e7c5bedef2425c594db07ec58476c902e6eb51a2b1c9cd2bad3772e921f5515dc2f8fb5447f7a56c20c99801ef1296c3bfef
+  languageName: node
+  linkType: hard
+
+"eslint-define-config@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "eslint-define-config@npm:1.1.1"
+  checksum: 27d9f3b7ca67df2e62207296507abc0d64f9566c95068c7d44a67184f0d6786c34cdcf117d1cb342ed6edc8e279aaf4343e8abc0193575fbbc5c4670f5958c12
   languageName: node
   linkType: hard
 
@@ -6023,6 +6050,15 @@ __metadata:
     i18next: ">= 19.0.0"
     react: ">= 16.8.0"
   checksum: 5630bfe1b39e6ce893fcccfba62cd42db92d130c0d00f181ec3bc68884ee0db3c698d0b6320d05dc783e5e32c14f7e547bb8aa034788a5f317563ad32f29edf9
+  languageName: node
+  linkType: hard
+
+"react-if@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "react-if@npm:4.1.1"
+  peerDependencies:
+    react: ^16.x || ^17.x
+  checksum: ea7c343eca1edb4b26221c41149fcf32073d89af763916ae2b49d4340a9e5e02961c1b7977397f2f4875117ed8c94db84875de4538995bf2a68daedb5990ede0
   languageName: node
   linkType: hard
 

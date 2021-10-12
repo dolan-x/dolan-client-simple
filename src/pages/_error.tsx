@@ -10,7 +10,7 @@ import Layout from '@/components/Layouts'
 type ErrorPageProps = {
   statusCode: number
 }
-const ErrorPage: FC<ErrorPageProps> = ({ statusCode }: ErrorPageProps) => {
+const ErrorPage: FC<ErrorPageProps> = ({ statusCode }) => {
   const { t } = useTranslation('common')
   return (
     <>

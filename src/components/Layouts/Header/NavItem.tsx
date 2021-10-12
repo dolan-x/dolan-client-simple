@@ -6,7 +6,7 @@ type NavItemProps = {
   href: string
 }
 type NavItemPropsWithChildren = PropsWithChildren<NavItemProps>
-const NavItem: FC<NavItemPropsWithChildren> = ({ href, children }: NavItemPropsWithChildren) => {
+const NavItem: FC<NavItemPropsWithChildren> = ({ href, children }) => {
   return (
     <NextLink
       href={href}

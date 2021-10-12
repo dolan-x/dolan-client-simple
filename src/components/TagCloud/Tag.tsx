@@ -12,7 +12,7 @@ type Props = {
 type NativeAttrs = Omit<HTMLAttributes<any>, keyof Props>
 type TagProps = Props & NativeAttrs
 
-const Tag: FC<TagProps> = ({ name, href, count, backgroundColor, className = '', ...props }: TagProps) => {
+const Tag: FC<TagProps> = ({ name, href, count, backgroundColor, className = '', ...props }) => {
   const getClasses = (): string => 'rounded text-xs inline-block px-2 py-1'
 
   return (

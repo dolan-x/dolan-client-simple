@@ -23,7 +23,7 @@ const PostCardWidget: FC<PostCardWidgetProps> = ({
   postID,
   authors,
   postMetas
-}: PostCardWidgetProps) => {
+}) => {
   const { t } = useTranslation('common')
   const link = useMemo(() => getPostLink(postID), [postID])
 

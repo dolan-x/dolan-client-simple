@@ -8,7 +8,7 @@ import { getTagLink } from '@/utils'
 type TagsProps = {
   tags: string[]
 }
-const Tags: FC<TagsProps> = ({ tags }: TagsProps) => {
+const Tags: FC<TagsProps> = ({ tags }) => {
   return (
     <div>
       {tags.map((tag, index) => (

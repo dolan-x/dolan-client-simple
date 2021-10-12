@@ -8,7 +8,7 @@ import { getCategoryLink } from '@/utils'
 type CategoryProps = {
   category: string
 }
-const Category: FC<CategoryProps> = ({ category }: CategoryProps) => {
+const Category: FC<CategoryProps> = ({ category }) => {
   return (
     <div>
       <Badge

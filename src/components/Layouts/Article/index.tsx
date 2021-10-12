@@ -27,7 +27,7 @@ const Article: FC<ArticleProps> = ({
   tags,
   category,
   pageType = 'post'
-}: ArticleProps) => {
+}) => {
   const authorNames = authors.map((author) => author.name)
 
   return (

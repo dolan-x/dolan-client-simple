@@ -9,7 +9,7 @@ import { Tag } from '@/lib/types'
 type TagCloudWidgetProps = {
   tags: Tag[]
 }
-const TagCloudWidget: FC<TagCloudWidgetProps> = ({ tags }: TagCloudWidgetProps) => {
+const TagCloudWidget: FC<TagCloudWidgetProps> = ({ tags }) => {
   const { t } = useTranslation('widgets')
 
   return (

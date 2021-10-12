@@ -4,7 +4,7 @@ import { Card, Text, CardProps } from '@geist-ui/react'
 type WidgetTitleProps = {
   children: string
 }
-const WidgetTitle: FC<WidgetTitleProps> = ({ children }: WidgetTitleProps) => {
+const WidgetTitle: FC<WidgetTitleProps> = ({ children }) => {
   return (
     <Text className="text-widget-title text-sm mb-2 tracking-widest uppercase">
       {children}
@@ -16,7 +16,13 @@ type WidgetProps = CardProps & {
   sticky?: boolean
   rounded?: boolean
 }
-const Widget: FC<WidgetProps> = ({ className = '', children, sticky = false, rounded = true, ...props }: WidgetProps) => {
+const Widget: FC<WidgetProps> = ({
+  className = '',
+  children,
+  sticky = false,
+  rounded = true,
+  ...props
+}) => {
   return (
     <Card
       className={`!mb-4 !shadow-widget !border-none ${rounded ? '!rounded-lg' : ''} ${sticky ? 'sticky' : ''} ${className}`}

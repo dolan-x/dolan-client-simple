@@ -1,4 +1,8 @@
-import { FC, useState, useEffect } from 'react'
+import {
+  FC,
+  useState,
+  useEffect
+} from 'react'
 
 const Footer: FC = () => {
   const [showAfterRender, setShowAfterRender] = useState<boolean>(false)

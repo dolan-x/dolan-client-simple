@@ -1,8 +1,16 @@
-import { FC, useState, useEffect } from 'react'
+import {
+  FC,
+  useState,
+  useEffect
+} from 'react'
 import NextLink from 'next/link'
-import { User, Link } from '@geist-ui/react'
+import {
+  User,
+  Link
+} from '@geist-ui/react'
 
 import NavItem from './NavItem'
+import LocaleSwitcher from './LocalSwitcher'
 
 const Header: FC = () => {
   const [showAfterRender, setShowAfterRender] = useState<boolean>(false)
@@ -25,13 +33,14 @@ const Header: FC = () => {
           </Link>
         </NextLink>
         {/* Nav End */}
-        <div>
+        <div className="flex items-center">
           <NavItem href="/categories">
             Categories
           </NavItem>
           <NavItem href="/tags">
             Tags
           </NavItem>
+          <LocaleSwitcher />
         </div>
       </div>
     </header>

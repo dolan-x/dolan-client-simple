@@ -1,4 +1,8 @@
-import { FC, useState, useEffect } from 'react'
+import {
+  FC,
+  useState,
+  useEffect
+} from 'react'
 import ScrollToTop from 'react-scroll-up'
 import { ArrowCircleUpIcon } from '@heroicons/react/outline'
 

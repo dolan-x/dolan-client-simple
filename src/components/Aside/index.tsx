@@ -13,8 +13,16 @@ const CategoriesWidget = dynamic(async () => await import('@/components/Widgets/
 const TagCloudWidget = dynamic(async () => await import('@/components/Widgets/TagCloudWidget'))
 
 const Aside: FC = () => {
-  const { categories, isLoading: isCategoriesLoading, isError: isCategoriesError } = useCategories()
-  const { tags, isLoading: isTagsLoading, isError: isTagsError } = useTags()
+  const {
+    categories,
+    isLoading: isCategoriesLoading,
+    isError: isCategoriesError
+  } = useCategories()
+  const {
+    tags,
+    isLoading: isTagsLoading,
+    isError: isTagsError
+  } = useTags()
 
   return (
     <aside className="flex flex-col w-full lg:w-aside">

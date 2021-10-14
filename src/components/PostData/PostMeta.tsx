@@ -18,10 +18,13 @@ const PostMetaItem: FC = ({ children }) => {
 }
 
 type PostMetaProps = {
-  authorNames: Array<Author['name']>
+  authorNames: Author['name'][]
   timestamp: Post['timestamp']
 }
-const PostMeta: FC<PostMetaProps> = ({ authorNames, timestamp }) => {
+const PostMeta: FC<PostMetaProps> = ({
+  authorNames,
+  timestamp
+}) => {
   const timeString = useMemo(() => getLocalTime(timestamp), [timestamp])
 
   return (

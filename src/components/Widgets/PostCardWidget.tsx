@@ -1,7 +1,15 @@
-import { FC, useMemo } from 'react'
+import {
+  FC,
+  useMemo
+} from 'react'
 import NextLink from 'next/link'
-import { useTranslation } from 'react-i18next'
-import { Text, Link, Button, Avatar } from '@geist-ui/react'
+import useTranslation from 'next-translate/useTranslation'
+import {
+  Text,
+  Link,
+  Button,
+  Avatar
+} from '@geist-ui/react'
 import { ArrowRightIcon } from '@heroicons/react/outline'
 
 import HeadingImage from '@/components/HeadingImage'

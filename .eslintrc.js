@@ -165,6 +165,7 @@ module.exports = defineConfig({
     '@typescript-eslint/triple-slash-reference': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/restrict-template-expressions': 'off',
-    '@typescript-eslint/consistent-type-definitions': ['warn', 'type']
+    '@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
+    '@typescript-eslint/array-type': ['warn', { default: 'array' }]
   }
 })

@@ -1,10 +1,8 @@
 import { FC } from 'react'
-import { GetServerSideProps } from 'next'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { useTranslation } from 'next-i18next'
+import useTranslation from 'next-translate/useTranslation'
 import { Breadcrumbs } from '@geist-ui/react'
 
 import Widget from '@/components/Widgets'
@@ -19,7 +17,11 @@ import { TagSlug } from '@/lib/types'
 const TagPage: FC = () => {
   const router = useRouter()
   const { slug } = router.query
-  const { tag, isLoading, isError } = useTag(slug as TagSlug)
+  const {
+    tag,
+    isLoading,
+    isError
+  } = useTag(slug as TagSlug)
   const { t } = useTranslation('widgets')
 
   return (
@@ -57,11 +59,3 @@ const TagPage: FC = () => {
 }
 
 export default TagPage
-
-export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['widgets', 'common']))
-    }
-  }
-}

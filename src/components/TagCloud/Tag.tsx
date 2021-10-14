@@ -1,4 +1,7 @@
-import { FC, HTMLAttributes } from 'react'
+import {
+  FC,
+  HTMLAttributes
+} from 'react'
 import NextLink from 'next/link'
 import { Link } from '@geist-ui/react'
 
@@ -12,7 +15,14 @@ type Props = {
 type NativeAttrs = Omit<HTMLAttributes<any>, keyof Props>
 type TagProps = Props & NativeAttrs
 
-const Tag: FC<TagProps> = ({ name, href, count, backgroundColor, className = '', ...props }) => {
+const Tag: FC<TagProps> = ({
+  name,
+  href,
+  count,
+  backgroundColor,
+  className = '',
+  ...props
+}) => {
   const getClasses = (): string => 'rounded text-xs inline-block px-2 py-1'
 
   return (

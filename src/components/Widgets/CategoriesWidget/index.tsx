@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { useTranslation } from 'next-i18next'
+import useTranslation from 'next-translate/useTranslation'
 
 import Widget from '..'
 import CategoryItem from './CategoryItem'

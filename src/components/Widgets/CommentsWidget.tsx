@@ -1,4 +1,7 @@
-import { FC, HTMLAttributes } from 'react'
+import {
+  FC,
+  HTMLAttributes
+} from 'react'
 import { Code } from '@geist-ui/react'
 
 import Widget from '.'
@@ -11,7 +14,10 @@ type Props = {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type NativeAttrs = Omit<HTMLAttributes<any>, keyof Props>
 type CommentsProps = Props & NativeAttrs
-const Comments: FC<CommentsProps> = ({ type, ...props }: CommentsProps) => {
+const Comments: FC<CommentsProps> = ({
+  type,
+  ...props
+}: CommentsProps) => {
   return (
     <Widget {...props}>
       <div className="text-center">

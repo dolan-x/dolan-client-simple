@@ -1,4 +1,9 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript
+} from 'next/document'
 import { CssBaseline } from '@geist-ui/react'
 
 class MyDocument extends Document {

@@ -1,7 +1,6 @@
 import { FC } from 'react'
 import { GetServerSideProps } from 'next'
 import Head from 'next/head'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import axios from 'axios'
 
 import Comments from '@/components/Widgets/CommentsWidget'
@@ -63,8 +62,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query, locale }) 
   return {
     props: {
       id,
-      data,
-      ...(await serverSideTranslations(locale, ['home', 'widgets', 'common']))
+      data
     }
   }
 }

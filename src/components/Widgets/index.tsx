@@ -1,5 +1,9 @@
 import { FC } from 'react'
-import { Card, Text, CardProps } from '@geist-ui/react'
+import {
+  Card,
+  Text,
+  CardProps
+} from '@geist-ui/react'
 
 type WidgetTitleProps = {
   children: string

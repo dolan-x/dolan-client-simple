@@ -1,9 +1,10 @@
-import { FC } from 'react'
-import { GetStaticProps } from 'next'
+import {
+  FC,
+  ReactNode
+} from 'react'
 import Head from 'next/head'
 import InfiniteScroll from 'react-infinite-scroll-component'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { useTranslation } from 'next-i18next'
+import useTranslation from 'next-translate/useTranslation'
 import { EyeOffIcon } from '@heroicons/react/outline'
 
 import { Post } from '@/lib/types'
@@ -33,7 +34,7 @@ const IndexPage: FC = () => {
   /* Post List */
   const data = usePosts()
   const posts = data.posts ? [...data.posts] : []
-  const renderPostList = () => {
+  const renderPostList = (): ReactNode => {
     if (data.isLoading) return <PostCardSkeleton />
     return (
       <>
@@ -83,11 +84,3 @@ const IndexPage: FC = () => {
 }
 
 export default IndexPage
-
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['home', 'widgets', 'common']))
-    }
-  }
-}

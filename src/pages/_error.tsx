@@ -1,7 +1,5 @@
 import { FC } from 'react'
-import { GetStaticProps } from 'next'
-import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import useTranslation from 'next-translate/useTranslation'
 import { Text } from '@geist-ui/react'
 
 import Widget from '@/components/Widgets'
@@ -34,11 +32,3 @@ const ErrorPage: FC<ErrorPageProps> = ({ statusCode }) => {
 }
 
 export default ErrorPage
-
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common']))
-    }
-  }
-}

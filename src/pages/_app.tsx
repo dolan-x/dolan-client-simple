@@ -3,8 +3,10 @@ import { AppProps } from 'next/app'
 import NextNProgress from 'nextjs-progressbar'
 import { ToastContainer } from 'react-toastify'
 import { SWRConfig } from 'swr'
-import { appWithTranslation } from 'next-i18next'
-import { GeistProvider, CssBaseline } from '@geist-ui/react'
+import {
+  GeistProvider,
+  CssBaseline
+} from '@geist-ui/react'
 import 'windi.css'
 
 import BackToTop from '@/components/BackToTop'
@@ -13,7 +15,12 @@ import { fetcher } from '@/lib/fetcher'
 import 'inter-ui/inter.css'
 import '@/styles/global.css'
 
-const MyApp: NextPage<AppProps> = ({ Component, pageProps }: AppProps) => {
+import 'intl-pluralrules'
+
+const MyApp: NextPage<AppProps> = ({
+  Component,
+  pageProps
+}: AppProps) => {
   return (
     <>
       <GeistProvider>
@@ -34,4 +41,4 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }: AppProps) => {
   )
 }
 
-export default appWithTranslation(MyApp)
+export default MyApp

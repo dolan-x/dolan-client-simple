@@ -1,4 +1,9 @@
-import { FC, useState, useEffect, useRef } from 'react'
+import {
+  FC,
+  useState,
+  useEffect,
+  useRef
+} from 'react'
 import HeadingImageSkeleton from './HeadingImage.skeleton'
 
 type HeadingImageProps = {

@@ -1,7 +1,5 @@
 import { FC } from 'react'
-import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import PageSkeleton from '@/components/Widgets/Page.skeleton'
 import TagCloudWidget from '@/components/Widgets/TagCloudWidget'
@@ -10,7 +8,11 @@ import Layout from '@/components/Layouts'
 import { useTags } from '@/lib/hooks'
 
 const TagsPage: FC = () => {
-  const { tags, isLoading, isError } = useTags()
+  const {
+    tags,
+    isLoading,
+    isError
+  } = useTags()
 
   return (
     <>
@@ -31,11 +33,3 @@ const TagsPage: FC = () => {
 }
 
 export default TagsPage
-
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['widgets']))
-    }
-  }
-}

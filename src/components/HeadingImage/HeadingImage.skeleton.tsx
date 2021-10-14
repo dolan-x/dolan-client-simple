@@ -1,4 +1,7 @@
-import { FC, memo } from 'react'
+import {
+  FC,
+  memo
+} from 'react'
 import { useTheme } from '@geist-ui/react'
 
 type Props = {
@@ -12,7 +15,10 @@ const defaultProps: Props = {
 export type ImageSkeletonProps = Props & typeof defaultProps
 
 const ImageSkeleton: FC<ImageSkeletonProps> = memo(
-  ({ opacity = 0.5, ...props }: ImageSkeletonProps) => {
+  ({
+    opacity = 0.5,
+    ...props
+  }: ImageSkeletonProps) => {
     const theme = useTheme()
     return (
       <div

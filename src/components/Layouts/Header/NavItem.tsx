@@ -22,7 +22,7 @@ const NavItem: FC<NavItemPropsWithChildren> = ({
 }) => {
   const renderNavItem = (): ReactNode => (
     <Button
-      className={`!min-w-0 !hover:bg-gray-100 !min-w-0 ${className}`}
+      className={`!min-w-0 !hover:bg-gray-100 !min-w-0 !flex items-center ${className}`}
       type="abort"
       {...props}
     >

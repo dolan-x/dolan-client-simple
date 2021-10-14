@@ -5,7 +5,6 @@ import {
 import useTranslation from 'next-translate/useTranslation'
 import setLanguage from 'next-translate/setLanguage'
 import { locales } from '../../../../i18n'
-
 import {
   Popover,
   Select
@@ -48,7 +47,7 @@ const LocaleSwitcher: FC<unknown> = () => {
       content={localeSwitcherDropdown}
       placement="bottomEnd"
     >
-      <NavItem className="!p-1">
+      <NavItem className="!p-3">
         <TranslateIcon className="w-6 h-6" />
       </NavItem>
     </Popover>

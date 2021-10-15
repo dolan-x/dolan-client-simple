@@ -40,7 +40,6 @@ const LocaleSwitcher: FC<unknown> = () => {
   return (
     <Popover
       content={localeSelector}
-      placement="bottomEnd"
     >
       <NavItem className="!p-3">
         <TranslateIcon className="w-6 h-6" />

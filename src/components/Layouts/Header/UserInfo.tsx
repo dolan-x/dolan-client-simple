@@ -7,7 +7,11 @@ import {
 import { UserIcon } from '@heroicons/react/outline'
 
 const UserInfo: FC<unknown> = () => {
-  const { visible, setVisible, bindings } = useModal()
+  const {
+    visible,
+    setVisible,
+    bindings
+  } = useModal()
 
   return (
     <>

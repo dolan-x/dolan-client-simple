@@ -2,6 +2,7 @@ import { NextPage } from 'next'
 import { AppProps } from 'next/app'
 import NextNProgress from 'nextjs-progressbar'
 import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import { SWRConfig } from 'swr'
 import {
   GeistProvider,

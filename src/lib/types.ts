@@ -1,3 +1,5 @@
+import { ReactNode } from 'react'
+
 export type Author = {
   name: string
   avatar: string
@@ -58,6 +60,13 @@ export type SiteProfile = {
   favicon: string
   name: string
   description: string
+}
+
+export type WidgetMeta = {
+  name: string
+  id: string
+  description: string
+  component: ReactNode
 }
 
 export type SupportedCommentSystems = 'waline' | 'twikoo' | 'disqus' | 'livere' | 'gitalk'

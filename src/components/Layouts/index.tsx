@@ -13,7 +13,7 @@ const Layout: FC = ({ children }) => {
           <div className="float-left w-full pr-0 lg:(w-main pr-4)">
             {children}
           </div>
-          <Aside />
+          <Aside widgetIDs={['org.dolan.widgets.tags', 'org.dolan.widgets.categories']} />
         </div>
       </div>
       <Footer />

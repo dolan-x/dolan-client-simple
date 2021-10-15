@@ -5,10 +5,7 @@ import {
 import useTranslation from 'next-translate/useTranslation'
 import setLanguage from 'next-translate/setLanguage'
 import { locales } from '../../../../i18n'
-import {
-  Popover,
-  Select
-} from '@geist-ui/react'
+import { Popover } from '@geist-ui/react'
 import { TranslateIcon } from '@heroicons/react/outline'
 
 import NavItem from './NavItem'
@@ -23,28 +20,26 @@ const LocaleSwitcher: FC<unknown> = () => {
     await setLanguage(locale)
   }
 
-  const localeSwitcherDropdown = (): ReactNode => (
-    <Popover.Item>
-      <Select
-        initialValue={lang}
-        onChange={handleChangeLocale}
-        type="success"
-      >
+  const localeSelector = (): ReactNode => {
+    return (
+      <>
         {locales.map((locale) => (
-          <Select.Option
-            value={locale}
+          <Popover.Item
+            onClick={locale !== lang && (async () => await handleChangeLocale(locale))}
             key={locale}
           >
-            {t(locale)}
-          </Select.Option>
+            <span className={`${locale !== lang ? 'cursor-pointer' : ''} ${locale === lang ? 'text-blue-300' : ''}`}>
+              {t(locale)}
+            </span>
+          </Popover.Item>
         ))}
-      </Select>
-    </Popover.Item>
-  )
+      </>
+    )
+  }
 
   return (
     <Popover
-      content={localeSwitcherDropdown}
+      content={localeSelector}
       placement="bottomEnd"
     >
       <NavItem className="!p-3">

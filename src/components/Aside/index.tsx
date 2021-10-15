@@ -1,33 +1,30 @@
-import { FC } from 'react'
-import dynamic from 'next/dynamic'
-
-import AsideWidgetSkeleton from './AsideWidget.skeleton'
-
 import {
-  useCategories,
-  useTags
-} from '@/lib/hooks'
-import { wrapLoadingWidget } from '@/utils'
+  FC,
+  Fragment
+} from 'react'
 
-const CategoriesWidget = dynamic(async () => await import('@/components/Widgets/CategoriesWidget'))
-const TagCloudWidget = dynamic(async () => await import('@/components/Widgets/TagCloudWidget'))
+import widgetMetas from '@/meta/asideWidgets'
 
-const Aside: FC = () => {
-  const {
-    categories,
-    isLoading: isCategoriesLoading,
-    isError: isCategoriesError
-  } = useCategories()
-  const {
-    tags,
-    isLoading: isTagsLoading,
-    isError: isTagsError
-  } = useTags()
+import toast from '@/lib/common/toast'
 
+type AsideProps = {
+  widgetIDs: string[]
+}
+const Aside: FC<AsideProps> = ({ widgetIDs }) => {
   return (
     <aside className="flex flex-col w-full lg:w-aside">
-      {wrapLoadingWidget(isCategoriesLoading, <CategoriesWidget categories={categories} />, <AsideWidgetSkeleton />)}
-      {wrapLoadingWidget(isTagsLoading, <TagCloudWidget tags={tags} />, <AsideWidgetSkeleton />)}
+      {widgetIDs.map((widgetID) => {
+        const widgetMeta = widgetMetas.find((widgetMeta) => widgetMeta.id === widgetID)
+        if (widgetMeta === undefined) {
+          toast('error', { text: `Couldn't find widget(${widgetID})` })
+          return null
+        }
+        return (
+          <Fragment key={widgetMeta.id}>
+            {widgetMeta.component}
+          </Fragment>
+        )
+      })}
     </aside>
   )
 }

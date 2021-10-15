@@ -10,7 +10,7 @@ import {
 } from '@geist-ui/react'
 
 import NavItem from './NavItem'
-import LocaleSwitcher from './LocalSwitcher'
+import LocaleSwitcher from './LocaleSwitcher'
 import UserInfo from './UserInfo'
 
 const Header: FC = () => {

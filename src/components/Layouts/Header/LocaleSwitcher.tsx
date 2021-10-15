@@ -4,7 +4,7 @@ import {
 } from 'react'
 import useTranslation from 'next-translate/useTranslation'
 import setLanguage from 'next-translate/setLanguage'
-import { locales } from '../../../../i18n'
+import { locales } from '~/i18n'
 import { Popover } from '@geist-ui/react'
 import { TranslateIcon } from '@heroicons/react/outline'
 

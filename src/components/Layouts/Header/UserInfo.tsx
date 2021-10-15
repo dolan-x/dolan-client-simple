@@ -22,12 +22,18 @@ const UserInfo: FC<unknown> = () => {
         <Modal.Subtitle>Aww man? 登录？不可能的</Modal.Subtitle>
         <Modal.Content>
           <Input
+            clearable
             className="my-6"
+            width="100%"
+            placeholder="Username"
             initialValue="so1ve"
           />
           <Input.Password
+            clearable
             className="my-6"
-            initialValue="123456abc"
+            width="100%"
+            placeholder="Password"
+            initialValue="114514"
           />
         </Modal.Content>
         <Modal.Action

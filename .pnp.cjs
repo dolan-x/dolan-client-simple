@@ -51,6 +51,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cross-env", "npm:7.0.3"],
             ["eslint", "npm:8.0.1"],
             ["eslint-define-config", "npm:1.1.1"],
+            ["eslint-import-resolver-node", "npm:0.3.6"],
             ["eslint-plugin-import", "virtual:1a348da0606ded88b8067d76fed7ed589155c05e22f227885ed4b7ea0309bc63f95f2cd0e62f55ec4cdd20320e8a5f9c4edadb04db8933cb516b180b5e5a079f#npm:2.25.2"],
             ["eslint-plugin-node", "virtual:1a348da0606ded88b8067d76fed7ed589155c05e22f227885ed4b7ea0309bc63f95f2cd0e62f55ec4cdd20320e8a5f9c4edadb04db8933cb516b180b5e5a079f#npm:11.1.0"],
             ["eslint-plugin-promise", "virtual:1a348da0606ded88b8067d76fed7ed589155c05e22f227885ed4b7ea0309bc63f95f2cd0e62f55ec4cdd20320e8a5f9c4edadb04db8933cb516b180b5e5a079f#npm:5.1.0"],
@@ -2715,18 +2716,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["virtual:4de727823e93b5c0e29cdf388c7f36990836094d024f9ce42a2052c654da8abae5c3d5264992d465a7298c6b6e82eb6c72dc100c42e9e370a0c71494c6f1d7eb#npm:3.2.7", {
-          "packageLocation": "./.yarn/__virtual__/debug-virtual-5d05e41f41/0/cache/debug-npm-3.2.7-754e818c7a-b3d8c59407.zip/node_modules/debug/",
-          "packageDependencies": [
-            ["debug", "virtual:4de727823e93b5c0e29cdf388c7f36990836094d024f9ce42a2052c654da8abae5c3d5264992d465a7298c6b6e82eb6c72dc100c42e9e370a0c71494c6f1d7eb#npm:3.2.7"],
-            ["ms", "npm:2.1.3"],
-            ["supports-color", null]
-          ],
-          "packagePeers": [
-            "supports-color"
-          ],
-          "linkType": "HARD",
-        }],
         ["virtual:58c45d1abcfbfa1f01b5cd3e53439720ec2578dbff5c28038489c39241aed010924080812c1c0437781a7914d49dcd5ab8069f87498c3e84e93a3fb3ed6111b7#npm:4.3.2", {
           "packageLocation": "./.yarn/__virtual__/debug-virtual-a1a79d3da6/0/cache/debug-npm-4.3.2-f0148b6afe-820ea160e2.zip/node_modules/debug/",
           "packageDependencies": [
@@ -2744,6 +2733,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["debug", "virtual:9b6c9b944a41629e97a67404226243509d6dbaa4c92564b0467df2a97089dbd8518ca616b7b87eb62d2716291994fc51d17017a3550ddbb28910a7e22ecf9a29#npm:2.6.9"],
             ["ms", "npm:2.0.0"],
+            ["supports-color", null]
+          ],
+          "packagePeers": [
+            "supports-color"
+          ],
+          "linkType": "HARD",
+        }],
+        ["virtual:d9426786c635bc4b52511d6cc4b56156f50d780a698c0e20fc6caf10d3be51cbf176e79cff882f4d42a23ff4d0f89fe94222849578214e7fbae0f2754c82af02#npm:3.2.7", {
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-b810fb6338/0/cache/debug-npm-3.2.7-754e818c7a-b3d8c59407.zip/node_modules/debug/",
+          "packageDependencies": [
+            ["debug", "virtual:d9426786c635bc4b52511d6cc4b56156f50d780a698c0e20fc6caf10d3be51cbf176e79cff882f4d42a23ff4d0f89fe94222849578214e7fbae0f2754c82af02#npm:3.2.7"],
+            ["ms", "npm:2.1.3"],
             ["supports-color", null]
           ],
           "packagePeers": [
@@ -2907,6 +2908,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cross-env", "npm:7.0.3"],
             ["eslint", "npm:8.0.1"],
             ["eslint-define-config", "npm:1.1.1"],
+            ["eslint-import-resolver-node", "npm:0.3.6"],
             ["eslint-plugin-import", "virtual:1a348da0606ded88b8067d76fed7ed589155c05e22f227885ed4b7ea0309bc63f95f2cd0e62f55ec4cdd20320e8a5f9c4edadb04db8933cb516b180b5e5a079f#npm:2.25.2"],
             ["eslint-plugin-node", "virtual:1a348da0606ded88b8067d76fed7ed589155c05e22f227885ed4b7ea0309bc63f95f2cd0e62f55ec4cdd20320e8a5f9c4edadb04db8933cb516b180b5e5a079f#npm:11.1.0"],
             ["eslint-plugin-promise", "virtual:1a348da0606ded88b8067d76fed7ed589155c05e22f227885ed4b7ea0309bc63f95f2cd0e62f55ec4cdd20320e8a5f9c4edadb04db8933cb516b180b5e5a079f#npm:5.1.0"],
@@ -3315,7 +3317,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/eslint-import-resolver-node-npm-0.3.6-d9426786c6-6266733af1.zip/node_modules/eslint-import-resolver-node/",
           "packageDependencies": [
             ["eslint-import-resolver-node", "npm:0.3.6"],
-            ["debug", "virtual:4de727823e93b5c0e29cdf388c7f36990836094d024f9ce42a2052c654da8abae5c3d5264992d465a7298c6b6e82eb6c72dc100c42e9e370a0c71494c6f1d7eb#npm:3.2.7"],
+            ["debug", "virtual:d9426786c635bc4b52511d6cc4b56156f50d780a698c0e20fc6caf10d3be51cbf176e79cff882f4d42a23ff4d0f89fe94222849578214e7fbae0f2754c82af02#npm:3.2.7"],
             ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=00b1ff"]
           ],
           "linkType": "HARD",
@@ -3326,7 +3328,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/eslint-module-utils-npm-2.7.1-2b7798b493-c30dfa125a.zip/node_modules/eslint-module-utils/",
           "packageDependencies": [
             ["eslint-module-utils", "npm:2.7.1"],
-            ["debug", "virtual:4de727823e93b5c0e29cdf388c7f36990836094d024f9ce42a2052c654da8abae5c3d5264992d465a7298c6b6e82eb6c72dc100c42e9e370a0c71494c6f1d7eb#npm:3.2.7"],
+            ["debug", "virtual:d9426786c635bc4b52511d6cc4b56156f50d780a698c0e20fc6caf10d3be51cbf176e79cff882f4d42a23ff4d0f89fe94222849578214e7fbae0f2754c82af02#npm:3.2.7"],
             ["find-up", "npm:2.1.0"],
             ["pkg-dir", "npm:2.0.0"]
           ],
@@ -4952,7 +4954,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@leancloud/platform-adapters-node", "npm:1.5.2"],
             ["@leancloud/platform-adapters-weapp", "npm:1.6.1"],
             ["base64-arraybuffer", "npm:0.1.5"],
-            ["debug", "virtual:4de727823e93b5c0e29cdf388c7f36990836094d024f9ce42a2052c654da8abae5c3d5264992d465a7298c6b6e82eb6c72dc100c42e9e370a0c71494c6f1d7eb#npm:3.2.7"],
+            ["debug", "virtual:d9426786c635bc4b52511d6cc4b56156f50d780a698c0e20fc6caf10d3be51cbf176e79cff882f4d42a23ff4d0f89fe94222849578214e7fbae0f2754c82af02#npm:3.2.7"],
             ["eventemitter3", "npm:3.1.2"],
             ["javascript-state-machine", "npm:2.4.0"],
             ["lodash", "npm:4.17.21"],
@@ -4995,7 +4997,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@leancloud/platform-adapters-node", "npm:1.5.2"],
             ["@leancloud/platform-adapters-weapp", "npm:1.6.1"],
             ["babel-runtime", "npm:6.26.0"],
-            ["debug", "virtual:4de727823e93b5c0e29cdf388c7f36990836094d024f9ce42a2052c654da8abae5c3d5264992d465a7298c6b6e82eb6c72dc100c42e9e370a0c71494c6f1d7eb#npm:3.2.7"],
+            ["debug", "virtual:d9426786c635bc4b52511d6cc4b56156f50d780a698c0e20fc6caf10d3be51cbf176e79cff882f4d42a23ff4d0f89fe94222849578214e7fbae0f2754c82af02#npm:3.2.7"],
             ["eventemitter3", "npm:2.0.3"],
             ["leancloud-realtime", "npm:5.0.0-rc.6"],
             ["leancloud-realtime-plugin-live-query", "virtual:7881393b0229f9894a70d21534abb347bc948c9ed6f8fbc4af4bdd2e5f2af389d92babbb95e872b0d8c45322245363589bc5aad0f5ef13b768cdb3bb0ba3059b#npm:1.2.0"],

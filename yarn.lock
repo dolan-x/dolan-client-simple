@@ -2270,6 +2270,7 @@ __metadata:
     cross-env: ^7.0.3
     eslint: ^8.0.1
     eslint-define-config: ^1.1.1
+    eslint-import-resolver-node: ^0.3.6
     eslint-plugin-import: ^2.25.2
     eslint-plugin-node: ^11.1.0
     eslint-plugin-promise: ^5.1.0

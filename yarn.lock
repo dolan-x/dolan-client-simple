@@ -133,7 +133,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.10.1, @babel/runtime@npm:^7.10.4, @babel/runtime@npm:^7.11.1, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.1, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:^7.10.1, @babel/runtime@npm:^7.10.4, @babel/runtime@npm:^7.11.1, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.1, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.15.4, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
   version: 7.15.4
   resolution: "@babel/runtime@npm:7.15.4"
   dependencies:
@@ -2254,6 +2254,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "dolan@workspace:."
   dependencies:
+    "@babel/runtime": ^7.15.4
     "@geist-ui/react": ^2.2.0
     "@heroicons/react": ^1.0.4
     "@qwp/eslint-config-standard-with-typescript": ^21.0.4
@@ -2279,14 +2280,17 @@ __metadata:
     intl-pluralrules: ^1.3.1
     leancloud-storage: ^4.12.0
     lint-staged: ^11.2.3
+    lru-cache: ^6.0.0
     next: ^11.1.2
     next-compose-plugins: ^2.2.1
     next-iron-session: ^4.2.0
     next-translate: ^1.1.1
     next-transpile-modules: ^8.0.0
     nextjs-progressbar: ^0.0.11
+    nextjs-redirect: ^5.0.2
     only-allow: ^1.0.0
     postcss: ^8.3.9
+    prop-types: ^15.7.2
     randomcolor: ^0.6.2
     react: ^17.0.2
     react-content-loader: ^6.0.3
@@ -2298,6 +2302,7 @@ __metadata:
     react-toastify: ^8.0.3
     redux: ^4.1.1
     rimraf: ^3.0.2
+    styled-jsx: ^4.0.1
     swr: ^1.0.1
     typescript: ^4.4.4
     windicss: ^3.1.9
@@ -4663,6 +4668,16 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"nextjs-redirect@npm:^5.0.2":
+  version: 5.0.2
+  resolution: "nextjs-redirect@npm:5.0.2"
+  peerDependencies:
+    next: "*"
+    react: "*"
+  checksum: d59edf0c4ea6e6a1d6a19ba45416c48c4edda8b1bedad0fbe5a1c8a10efceadb1892ce42ff7764640627a45d3d51bddc70191a4bea63242c02f2c7f45dca7ecd
+  languageName: node
+  linkType: hard
+
 "node-fetch@npm:2.6.1":
   version: 2.6.1
   resolution: "node-fetch@npm:2.6.1"
@@ -6783,7 +6798,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"styled-jsx@npm:4.0.1":
+"styled-jsx@npm:4.0.1, styled-jsx@npm:^4.0.1":
   version: 4.0.1
   resolution: "styled-jsx@npm:4.0.1"
   dependencies:

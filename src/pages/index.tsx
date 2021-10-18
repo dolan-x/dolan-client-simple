@@ -12,7 +12,7 @@ import { usePosts } from '@/lib/hooks'
 
 import Widget from '@/components/Widgets'
 import PostCardWidget from '@/components/Widgets/PostCardWidget'
-import PostCardSkeleton from '@/components/Widgets/PostCard.skeleton'
+import PostCardSkeleton from '@/components/Widgets/PostCardWidget/PostCard.skeleton'
 import Layout from '@/components/Layouts'
 
 // Show at bottom

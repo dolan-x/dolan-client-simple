@@ -5,7 +5,7 @@ import {
 
 import widgetMetas from '@/meta/asideWidgets'
 
-import toast from '@/lib/common/toast'
+import toast from '@/lib/toast'
 
 type AsideProps = {
   widgetIDs: string[]

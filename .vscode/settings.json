@@ -3,6 +3,9 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
   "editor.tabSize": 2,
   "search.exclude": {
     "**/.yarn": true,

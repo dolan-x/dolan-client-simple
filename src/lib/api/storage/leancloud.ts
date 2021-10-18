@@ -44,21 +44,23 @@ class LeanCloudStorageAPI extends Base {
     })
   }
 
-  getTags (): Tag[] {
-    return {} as Tag[]
+  async getTags (): Promise<Tag[]> {
+    return await Promise.resolve({} as Tag[])
   }
 
-  getTag (slug: TagSlug): Tag {
-    return {} as Tag
+  async getTag (slug: TagSlug): Promise<Tag> {
+    return await Promise.resolve({} as Tag)
   }
 
-  getPost (id: PostID): Post {
-    return {} as Post
+  async getPost (id: PostID): Promise<Post> {
+    return await Promise.resolve({} as Post)
   }
 
-  getPosts (): Post[] {
-    return {} as Post[]
+  async getPosts (): Promise<Post[]> {
+    return await Promise.resolve({} as Post[])
   }
 }
 
-export default new LeanCloudStorageAPI(process.env)
+const lean = new LeanCloudStorageAPI(process.env)
+
+export default lean

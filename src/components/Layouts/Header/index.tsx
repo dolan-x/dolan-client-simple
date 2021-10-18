@@ -20,7 +20,7 @@ const Header: FC = () => {
   if (!showAfterRender) return null
   return (
     <header>
-      <div className="flex justify-between fixed top-0 h-auto w-full py-2 px-1 mx-auto max-w-main shadow-sm bg-white z-9999 lg:(py-4 px-5 backdrop-filter backdrop-saturate-150 backdrop-blur-sm bg-header-background)">
+      <div className="flex justify-between fixed top-0 h-auto w-full py-2 px-1 mx-auto max-w-main shadow-sm bg-white z-999 lg:(py-4 px-5 backdrop-filter backdrop-saturate-150 backdrop-blur-sm bg-header-background)">
         {/* Nav Start */}
         <NextLink
           href="/"

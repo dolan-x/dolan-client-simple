@@ -7,16 +7,33 @@ import Comments from '@/components/Widgets/CommentsWidget'
 import Layout from '@/components/Layouts'
 import Article from '@/components/Layouts/Article'
 
-import { Post, PostID } from '@/lib/types'
+import {
+  Post,
+  PostID,
+  SuccessAPIResult,
+  NotFoundAPIResult
+} from '@/lib/types'
 import { usePost } from '@/lib/hooks'
 import { getAPILink } from '@/utils'
 
 type PostPageProps = {
   id: PostID
-  data: Post
+  data: Post & SuccessAPIResult | NotFoundAPIResult
 }
 
 const PostPage: FC<PostPageProps> = ({ id, data }) => {
+  if (data.status === 404) {
+    return (
+      <>
+        <Head>
+          <title>404_Test</title>
+        </Head>
+        <Layout>
+          404
+        </Layout>
+      </>
+    )
+  }
   const { post } = usePost(id, data)
   const {
     postMetas,

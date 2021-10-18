@@ -10,6 +10,7 @@ module.exports = defineConfig({
   extends: [
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:json/recommended',
     '@qwp/standard-with-typescript'
   ],
   parser: '@typescript-eslint/parser',

@@ -33,9 +33,6 @@ export default defineConfig({
         425: '425px',
         500: '500px'
       },
-      zIndex: {
-        9999: '9999'
-      },
       boxShadow: {
         widget: '0 1px 2px 0 rgb(0 0 0 / 10%)'
       }

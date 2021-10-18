@@ -38,9 +38,7 @@ const LocaleSwitcher: FC<unknown> = () => {
   }
 
   return (
-    <Popover
-      content={localeSelector}
-    >
+    <Popover content={localeSelector} >
       <NavItem className="!p-3">
         <TranslateIcon className="w-6 h-6" />
       </NavItem>

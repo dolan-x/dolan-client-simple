@@ -6,8 +6,6 @@ export default (req: NextApiRequest, res: NextApiResponse): void => {
     .json({
       code: 'invalid_rest_api',
       message: 'Rest API not found.',
-      data: {
-        status: 404
-      }
+      status: 404
     })
 }

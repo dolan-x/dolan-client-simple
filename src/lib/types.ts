@@ -6,18 +6,25 @@ export type Author = {
   bio?: string
 }
 
-export type PostID = string & { readonly brand: unique symbol }
-export type TagSlug = string & { readonly brand: unique symbol }
-export type CategorySlug = string & { readonly brand: unique symbol }
+export type Brand<T> = T & { readonly brand: unique symbol }
+
+export type PostID = Brand<string>
+
+export type TagSlug = Brand<string>
+
+export type CategorySlug = Brand<string>
 
 export type Post = {
   title: {
+    original?: string
     rendered: string
   }
   content: {
+    original?: string
     rendered: string
   }
   excerpt: {
+    original?: string
     rendered: string
   }
   sticky: false
@@ -69,6 +76,16 @@ export type WidgetMeta = {
   component: ReactNode
 }
 
+export type NotFoundAPIResult = {
+  code: 'invalid_rest_api'
+  message: 'Rest API not found.'
+  status: 404
+}
+
+export type SuccessAPIResult = {
+  status: 200
+}
+
 export type SupportedCommentSystems = 'waline' | 'twikoo' | 'disqus' | 'livere' | 'gitalk'
 
-export type SupportedLocales = 'en' | 'zh-Hans'
+export type SupportedLocales = 'en-US' | 'zh-Hans'

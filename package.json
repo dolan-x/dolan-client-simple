@@ -13,7 +13,7 @@
     "preinstall": "npx only-allow yarn"
   },
   "dependencies": {
-    "@geist-ui/react": "^2.2.0",
+    "@geist-ui/react": "git+https://github.com/so1ve/react.git",
     "@heroicons/react": "^1.0.4",
     "axios": "^0.23.0",
     "inter-ui": "^3.19.3",

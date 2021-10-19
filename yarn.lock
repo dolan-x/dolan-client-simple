@@ -129,15 +129,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@geist-ui/react@npm:^2.2.0":
+"@geist-ui/react@git+https://github.com/so1ve/react.git":
   version: 2.2.0
-  resolution: "@geist-ui/react@npm:2.2.0"
+  resolution: "@geist-ui/react@https://github.com/so1ve/react.git#commit=7d388035146477888f8cb04b2765c926af75c1ee"
   dependencies:
     styled-jsx: ^4.0.0
   peerDependencies:
     react: ">=16.9.0"
     react-dom: ">=16.9.0"
-  checksum: a0255f911f89e855703f40cb448a423581a5d8042b6d2d7702e62f32495a083d0251b958e8dae56fde477bbd3daaf3482d7a8fd619869d2ee8f58c93e12d8f61
+  checksum: cb922ad7edd7047292085a6a48646d59ce5f3f6d40778849f2b4c1e56d32107454d54edfb4c0b6c3387e82f918728094f564719361cddadf1354e0ee4e6964a1
   languageName: node
   linkType: hard
 
@@ -2138,7 +2138,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "dolan@workspace:."
   dependencies:
-    "@geist-ui/react": ^2.2.0
+    "@geist-ui/react": "git+https://github.com/so1ve/react.git"
     "@heroicons/react": ^1.0.4
     "@qwp/eslint-config-standard-with-typescript": ^21.0.4
     "@types/eslint": ^7.28.1

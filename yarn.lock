@@ -129,15 +129,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@geist-ui/react@git+https://github.com/so1ve/react.git":
+"@geist-ui/react@npm:^2.2.0":
   version: 2.2.0
-  resolution: "@geist-ui/react@https://github.com/so1ve/react.git#commit=7d388035146477888f8cb04b2765c926af75c1ee"
+  resolution: "@geist-ui/react@npm:2.2.0"
   dependencies:
     styled-jsx: ^4.0.0
   peerDependencies:
     react: ">=16.9.0"
     react-dom: ">=16.9.0"
-  checksum: cb922ad7edd7047292085a6a48646d59ce5f3f6d40778849f2b4c1e56d32107454d54edfb4c0b6c3387e82f918728094f564719361cddadf1354e0ee4e6964a1
+  checksum: a0255f911f89e855703f40cb448a423581a5d8042b6d2d7702e62f32495a083d0251b958e8dae56fde477bbd3daaf3482d7a8fd619869d2ee8f58c93e12d8f61
   languageName: node
   linkType: hard
 
@@ -2138,7 +2138,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "dolan@workspace:."
   dependencies:
-    "@geist-ui/react": "git+https://github.com/so1ve/react.git"
+    "@geist-ui/react": ^2.2.0
     "@heroicons/react": ^1.0.4
     "@qwp/eslint-config-standard-with-typescript": ^21.0.4
     "@types/eslint": ^7.28.1
@@ -2996,15 +2996,6 @@ __metadata:
   dependencies:
     node-gyp: latest
   checksum: 78db9daf1f6526a49cefee3917cc988f62dc7f25b5dd80ad6de4ffc4af7f0cab7491ac737626ff53e482a111bc53aac9e411fe3602458eca36f6a003ecf69c16
-  languageName: node
-  linkType: hard
-
-fsevents@~2.3.1:
-  version: 2.3.2
-  resolution: "fsevents@npm:2.3.2"
-  dependencies:
-    node-gyp: latest
-  checksum: 97ade64e75091afee5265e6956cb72ba34db7819b4c3e94c431d4be2b19b8bb7a2d4116da417950c3425f17c8fe693d25e20212cac583ac1521ad066b77ae31f
   languageName: node
   linkType: hard
 
@@ -5608,26 +5599,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"resolve@^1.10.1, resolve@^1.20.0":
-  version: 1.20.0
-  resolution: "resolve@npm:1.20.0"
-  dependencies:
-    is-core-module: ^2.2.0
-    path-parse: ^1.0.6
-  checksum: 40cf70b2cde00ef57f99daf2dc63c6a56d6c14a1b7fc51735d06a6f0a3b97cb67b4fb7ef6c747b4e13a7baba83b0ef625d7c4ce92a483cd5af923c3b65fd16fe
-  languageName: node
-  linkType: hard
-
-resolve@^2.0.0-next.3:
-  version: 2.0.0-next.3
-  resolution: "resolve@npm:2.0.0-next.3"
-  dependencies:
-    is-core-module: ^2.2.0
-    path-parse: ^1.0.6
-  checksum: f34b3b93ada77d64a6d590c06a83e198f3a827624c4ec972260905fa6c4d612164fbf0200d16d2beefea4ad1755b001f4a9a1293d8fc2322a8f7d6bf692c4ff5
-  languageName: node
-  linkType: hard
-
 "resolve@patch:resolve@^1.10.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.20.0#~builtin<compat/resolve>":
   version: 1.20.0
   resolution: "resolve@patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=00b1ff"
@@ -6520,16 +6491,6 @@ resolve@^2.0.0-next.3:
   version: 0.0.7
   resolution: "typed-styles@npm:0.0.7"
   checksum: 36a6ad6bee008c15ddb8c2425eaf9aee37d2841985b4c44406ea4cf57080a9c30b6f9f3feb842ac952354733ac53299ee44f68d83f734486e8344d413f8c8c0d
-  languageName: node
-  linkType: hard
-
-typescript@^4.4.4:
-  version: 4.4.4
-  resolution: "typescript@npm:4.4.4"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 89ecb8436bb48ef5594d49289f5f89103071716b6e4844278f4fb3362856e31203e187a9c76d205c3f0b674d221a058fd28310dbcbcf5d95e9a57229bb5203f1
   languageName: node
   linkType: hard
 

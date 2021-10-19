@@ -1,60 +1,19 @@
-diff --git a/.history/dist/input/password.d_19840623054959.ts b/.history/dist/input/password.d_19840623054959.ts
-new file mode 100644
-index 0000000000000000000000000000000000000000..daf98db9c3dea5ef0e62a6b58b1802975a214a2d
---- /dev/null
-+++ b/.history/dist/input/password.d_19840623054959.ts
-@@ -0,0 +1,11 @@
-+import React from 'react';
-+import { Props } from "./input-props";
-+interface PasswordProps extends Props {
-+    hideToggle?: boolean;
-+}
-+declare type NativeAttrs = Omit<React.InputHTMLAttributes<any>, keyof PasswordProps>;
-+export declare type InputPasswordProps = PasswordProps & NativeAttrs;
-+declare const InputPassword: React.ForwardRefExoticComponent<PasswordProps & NativeAttrs & {
-+    children?: React.ReactNode;
-+} & React.RefAttributes<HTMLInputElement>>;
-+export default InputPassword;
-diff --git a/.history/dist/input/password.d_20211019204845.ts b/.history/dist/input/password.d_20211019204845.ts
-new file mode 100644
-index 0000000000000000000000000000000000000000..310c92f185c46986c452405b6f2d45213996e44e
---- /dev/null
-+++ b/.history/dist/input/password.d_20211019204845.ts
-@@ -0,0 +1,12 @@
-+import React from 'react';
-+import { Props } from "./input-props";
-+interface PasswordProps extends Props {
-+    hideToggle?: boolean;
-+    
-+}
-+declare type NativeAttrs = Omit<React.InputHTMLAttributes<any>, keyof PasswordProps>;
-+export declare type InputPasswordProps = PasswordProps & NativeAttrs;
-+declare const InputPassword: React.ForwardRefExoticComponent<PasswordProps & NativeAttrs & {
-+    children?: React.ReactNode;
-+} & React.RefAttributes<HTMLInputElement>>;
-+export default InputPassword;
-diff --git a/.history/dist/input/password.d_20211019204901.ts b/.history/dist/input/password.d_20211019204901.ts
-new file mode 100644
-index 0000000000000000000000000000000000000000..0e4eefe724247c5067a1ef4094337a662f8cdc15
---- /dev/null
-+++ b/.history/dist/input/password.d_20211019204901.ts
-@@ -0,0 +1,12 @@
-+import React from 'react';
-+import { Props } from "./input-props";
-+interface PasswordProps extends Props {
-+    hideToggle?: boolean;
-+    scale?: number;
-+}
-+declare type NativeAttrs = Omit<React.InputHTMLAttributes<any>, keyof PasswordProps>;
-+export declare type InputPasswordProps = PasswordProps & NativeAttrs;
-+declare const InputPassword: React.ForwardRefExoticComponent<PasswordProps & NativeAttrs & {
-+    children?: React.ReactNode;
-+} & React.RefAttributes<HTMLInputElement>>;
-+export default InputPassword;
 diff --git a/dist/input/password.d.ts b/dist/input/password.d.ts
 index daf98db9c3dea5ef0e62a6b58b1802975a214a2d..0e4eefe724247c5067a1ef4094337a662f8cdc15 100644
 --- a/dist/input/password.d.ts
 +++ b/dist/input/password.d.ts
+@@ -2,6 +2,7 @@ import React from 'react';
+ import { Props } from "./input-props";
+ interface PasswordProps extends Props {
+     hideToggle?: boolean;
++    scale?: number;
+ }
+ declare type NativeAttrs = Omit<React.InputHTMLAttributes<any>, keyof PasswordProps>;
+ export declare type InputPasswordProps = PasswordProps & NativeAttrs;
+diff --git a/esm/input/password.d.ts b/esm/input/password.d.ts
+index daf98db9c3dea5ef0e62a6b58b1802975a214a2d..0e4eefe724247c5067a1ef4094337a662f8cdc15 100644
+--- a/esm/input/password.d.ts
++++ b/esm/input/password.d.ts
 @@ -2,6 +2,7 @@ import React from 'react';
  import { Props } from "./input-props";
  interface PasswordProps extends Props {

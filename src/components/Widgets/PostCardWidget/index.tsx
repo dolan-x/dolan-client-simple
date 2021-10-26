@@ -78,20 +78,18 @@ const PostCardWidget: FC<PostCardWidgetProps> = ({
             ))}
           </Avatar.Group>
           {/* Read More */}
-          <Button
-            type="abort"
-            auto
+          <NextLink
+            href={link}
+            passHref
           >
-            <NextLink
-              href={link}
-              passHref
+            <Link
+              className="!items-center !text-blue-300 !hover:text-yellow-300"
+              block
             >
-              <Link className="!items-center !text-blue-300 !hover:text-yellow-300">
-                {t('read-more')}
-                <ArrowRightIcon className="w-5 h-5 pl-1 !-mr-3" />
-              </Link>
-            </NextLink>
-          </Button>
+              {t('read-more')}
+              <ArrowRightIcon className="w-5 h-5 pl-1 !-mr-3" />
+            </Link>
+          </NextLink>
         </div>
       </Widget.Footer>
     </Widget>

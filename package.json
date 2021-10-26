@@ -67,5 +67,8 @@
     "postcss": "^8.3.9",
     "rimraf": "^3.0.2",
     "typescript": "^4.4.4"
+  },
+  "resolutions": {
+    "@geist-ui/react@2.2.0": "patch:@geist-ui/react@npm:2.2.0#.yarn/patches/@geist-ui-react-npm-2.2.0-b595fd802d"
   }
 }

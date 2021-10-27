@@ -1,5 +1,8 @@
 lockfileVersion: 5.3
 
+overrides:
+  '@geist-ui/react@2.2.0': patch:@geist-ui/react@npm:2.2.0#.yarn/patches/@geist-ui-react-npm-2.2.0-b595fd802d
+
 specifiers:
   '@geist-ui/react': ^2.2.0
   '@heroicons/react': ^1.0.4
@@ -62,7 +65,7 @@ dependencies:
   intl-pluralrules: registry.npmmirror.com/intl-pluralrules/1.3.1
   leancloud-storage: registry.npmmirror.com/leancloud-storage/4.12.0
   lru-cache: registry.npmmirror.com/lru-cache/6.0.0
-  next: registry.npmmirror.com/next/11.1.2_react-dom@17.0.2+react@17.0.2
+  next: registry.npmmirror.com/next/11.1.2_8e3522129ef2816b3c737f17aecb3a9d
   next-iron-session: registry.npmmirror.com/next-iron-session/4.2.0
   next-translate: registry.npmmirror.com/next-translate/1.1.1_next@11.1.2+react@17.0.2
   nextjs-progressbar: registry.npmmirror.com/nextjs-progressbar/0.0.11_next@11.1.2+react@17.0.2
@@ -111,6 +114,50 @@ devDependencies:
   typescript: registry.npmmirror.com/typescript/4.4.4
 
 packages:
+
+  /@next/swc-darwin-arm64/11.1.2:
+    resolution: {integrity: sha512-hZuwOlGOwBZADA8EyDYyjx3+4JGIGjSHDHWrmpI7g5rFmQNltjlbaefAbiU5Kk7j3BUSDwt30quJRFv3nyJQ0w==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@next/swc-darwin-x64/11.1.2:
+    resolution: {integrity: sha512-PGOp0E1GisU+EJJlsmJVGE+aPYD0Uh7zqgsrpD3F/Y3766Ptfbe1lEPPWnRDl+OzSSrSrX1lkyM/Jlmh5OwNvA==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@next/swc-linux-x64-gnu/11.1.2:
+    resolution: {integrity: sha512-YcDHTJjn/8RqvyJVB6pvEKXihDcdrOwga3GfMv/QtVeLphTouY4BIcEUfrG5+26Nf37MP1ywN3RRl1TxpurAsQ==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@next/swc-win32-x64-msvc/11.1.2:
+    resolution: {integrity: sha512-e/pIKVdB+tGQYa1cW3sAeHm8gzEri/HYLZHT4WZojrUxgWXqx8pk7S7Xs47uBcFTqBDRvK3EcQpPLf3XdVsDdg==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /fsevents/2.3.2:
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
 
   registry.npmmirror.com/@antfu/utils/0.3.0:
     resolution: {integrity: sha1-YwbEO1Kog72Olz4+2N1kJIQYvMQ=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/@antfu/utils/download/@antfu/utils-0.3.0.tgz}
@@ -224,6 +271,8 @@ packages:
       js-yaml: registry.npmmirror.com/js-yaml/3.14.1
       minimatch: registry.npmmirror.com/minimatch/3.0.4
       strip-json-comments: registry.npmmirror.com/strip-json-comments/3.1.1
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmmirror.com/@geist-ui/react/2.2.0_react-dom@17.0.2+react@17.0.2:
@@ -320,6 +369,8 @@ packages:
       '@humanwhocodes/object-schema': registry.npmmirror.com/@humanwhocodes/object-schema/1.2.0
       debug: registry.npmmirror.com/debug/4.3.2
       minimatch: registry.npmmirror.com/minimatch/3.0.4
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmmirror.com/@humanwhocodes/object-schema/1.2.0:
@@ -370,6 +421,8 @@ packages:
       '@leancloud/adapter-utils': registry.npmmirror.com/@leancloud/adapter-utils/1.2.2
       '@types/superagent': registry.npmmirror.com/@types/superagent/4.1.13
       superagent: registry.npmmirror.com/superagent/5.3.1
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   registry.npmmirror.com/@leancloud/platform-adapters-browser/1.5.2:
@@ -379,6 +432,8 @@ packages:
     dependencies:
       '@leancloud/adapter-types': registry.npmmirror.com/@leancloud/adapter-types/5.0.0
       '@leancloud/adapters-superagent': registry.npmmirror.com/@leancloud/adapters-superagent/1.4.2
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   registry.npmmirror.com/@leancloud/platform-adapters-node/1.5.2:
@@ -391,6 +446,8 @@ packages:
       '@types/ws': registry.npmmirror.com/@types/ws/7.4.7
       localstorage-memory: registry.npmmirror.com/localstorage-memory/1.0.3
       ws: registry.npmmirror.com/ws/5.2.3
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   registry.npmmirror.com/@leancloud/platform-adapters-weapp/1.6.1:
@@ -461,50 +518,6 @@ packages:
       react-refresh: registry.npmmirror.com/react-refresh/0.8.3
     dev: false
 
-  registry.npmmirror.com/@next/swc-darwin-arm64/11.1.2:
-    resolution: {integrity: sha1-kyJsONtIjEtiswpTtTDofJabglE=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/@next/swc-darwin-arm64/download/@next/swc-darwin-arm64-11.1.2.tgz}
-    name: '@next/swc-darwin-arm64'
-    version: 11.1.2
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [darwin]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  registry.npmmirror.com/@next/swc-darwin-x64/11.1.2:
-    resolution: {integrity: sha1-eSADmJ9WDABne12u/zYLNbUQ24M=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/@next/swc-darwin-x64/download/@next/swc-darwin-x64-11.1.2.tgz}
-    name: '@next/swc-darwin-x64'
-    version: 11.1.2
-    engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [darwin]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  registry.npmmirror.com/@next/swc-linux-x64-gnu/11.1.2:
-    resolution: {integrity: sha1-ghayrh8h8BEpWHNcOd2GEIgQjzc=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/@next/swc-linux-x64-gnu/download/@next/swc-linux-x64-gnu-11.1.2.tgz}
-    name: '@next/swc-linux-x64-gnu'
-    version: 11.1.2
-    engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [linux]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  registry.npmmirror.com/@next/swc-win32-x64-msvc/11.1.2:
-    resolution: {integrity: sha1-4VgkQF3xNxKZGCBeQ8tekzlYl0U=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/@next/swc-win32-x64-msvc/download/@next/swc-win32-x64-msvc-11.1.2.tgz}
-    name: '@next/swc-win32-x64-msvc'
-    version: 11.1.2
-    engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [win32]
-    requiresBuild: true
-    dev: false
-    optional: true
-
   registry.npmmirror.com/@node-rs/helper/1.2.1:
     resolution: {integrity: sha1-4HmwXyH/QynYLE4fccApDk7Nxww=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/@node-rs/helper/download/@node-rs/helper-1.2.1.tgz}
     name: '@node-rs/helper'
@@ -558,6 +571,8 @@ packages:
       eslint-plugin-node: registry.npmmirror.com/eslint-plugin-node/11.1.0_eslint@8.1.0
       eslint-plugin-promise: registry.npmmirror.com/eslint-plugin-promise/5.1.1_eslint@8.1.0
       typescript: registry.npmmirror.com/typescript/4.4.4
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmmirror.com/@types/cookie/0.4.1:
@@ -697,6 +712,8 @@ packages:
       semver: registry.npmmirror.com/semver/7.3.5
       tsutils: registry.npmmirror.com/tsutils/3.21.0_typescript@4.4.4
       typescript: registry.npmmirror.com/typescript/4.4.4
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmmirror.com/@typescript-eslint/experimental-utils/5.2.0_eslint@8.1.0+typescript@4.4.4:
@@ -716,6 +733,7 @@ packages:
       eslint-scope: registry.npmmirror.com/eslint-scope/5.1.1
       eslint-utils: registry.npmmirror.com/eslint-utils/3.0.0_eslint@8.1.0
     transitivePeerDependencies:
+      - supports-color
       - typescript
     dev: true
 
@@ -738,6 +756,8 @@ packages:
       debug: registry.npmmirror.com/debug/4.3.2
       eslint: registry.npmmirror.com/eslint/8.1.0
       typescript: registry.npmmirror.com/typescript/4.4.4
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmmirror.com/@typescript-eslint/parser/5.2.0_eslint@8.1.0+typescript@4.4.4:
@@ -759,6 +779,8 @@ packages:
       debug: registry.npmmirror.com/debug/4.3.2
       eslint: registry.npmmirror.com/eslint/8.1.0
       typescript: registry.npmmirror.com/typescript/4.4.4
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmmirror.com/@typescript-eslint/scope-manager/4.33.0:
@@ -815,6 +837,8 @@ packages:
       semver: registry.npmmirror.com/semver/7.3.5
       tsutils: registry.npmmirror.com/tsutils/3.21.0_typescript@4.4.4
       typescript: registry.npmmirror.com/typescript/4.4.4
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmmirror.com/@typescript-eslint/typescript-estree/5.2.0_typescript@4.4.4:
@@ -837,6 +861,8 @@ packages:
       semver: registry.npmmirror.com/semver/7.3.5
       tsutils: registry.npmmirror.com/tsutils/3.21.0_typescript@4.4.4
       typescript: registry.npmmirror.com/typescript/4.4.4
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmmirror.com/@typescript-eslint/visitor-keys/4.33.0:
@@ -867,6 +893,8 @@ packages:
       debug: registry.npmmirror.com/debug/4.3.2
       jiti: registry.npmmirror.com/jiti/1.12.9
       windicss: registry.npmmirror.com/windicss/3.1.9
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   registry.npmmirror.com/@windicss/plugin-utils/1.4.12:
@@ -881,6 +909,8 @@ packages:
       magic-string: registry.npmmirror.com/magic-string/0.25.7
       micromatch: registry.npmmirror.com/micromatch/4.0.4
       windicss: registry.npmmirror.com/windicss/3.1.9
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   registry.npmmirror.com/acorn-jsx/5.3.2_acorn@8.5.0:
@@ -1146,6 +1176,8 @@ packages:
     version: 0.23.0
     dependencies:
       follow-redirects: registry.npmmirror.com/follow-redirects/1.14.4
+    transitivePeerDependencies:
+      - debug
     dev: false
 
   registry.npmmirror.com/babel-plugin-import/1.13.3:
@@ -1484,7 +1516,7 @@ packages:
       normalize-path: registry.npmmirror.com/normalize-path/3.0.0
       readdirp: registry.npmmirror.com/readdirp/3.5.0
     optionalDependencies:
-      fsevents: registry.npmmirror.com/fsevents/2.3.2
+      fsevents: 2.3.2
     dev: false
 
   registry.npmmirror.com/cipher-base/1.0.4:
@@ -1801,6 +1833,9 @@ packages:
     version: 3.0.0
     peerDependencies:
       postcss: ^8.2.15
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       cssnano-preset-simple: registry.npmmirror.com/cssnano-preset-simple/3.0.0_postcss@8.2.15
       postcss: registry.npmmirror.com/postcss/8.2.15
@@ -1837,8 +1872,29 @@ packages:
     name: debug
     version: 4.3.2
     engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     dependencies:
       ms: registry.npmmirror.com/ms/2.1.2
+
+  registry.npmmirror.com/debug/4.3.2_supports-color@8.1.1:
+    resolution: {integrity: sha1-8KScGKyHeeMdSgxgKd+3aHPHQos=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/debug/download/debug-4.3.2.tgz}
+    id: registry.npmmirror.com/debug/4.3.2
+    name: debug
+    version: 4.3.2
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dependencies:
+      ms: registry.npmmirror.com/ms/2.1.2
+      supports-color: registry.npmmirror.com/supports-color/8.1.1
+    dev: true
 
   registry.npmmirror.com/decamelize/1.2.0:
     resolution: {integrity: sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/decamelize/download/decamelize-1.2.0.tgz}
@@ -2374,6 +2430,8 @@ packages:
       strip-json-comments: registry.npmmirror.com/strip-json-comments/3.1.1
       text-table: registry.npmmirror.com/text-table/0.2.0
       v8-compile-cache: registry.npmmirror.com/v8-compile-cache/2.3.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmmirror.com/espree/9.0.0:
@@ -2604,6 +2662,11 @@ packages:
     name: follow-redirects
     version: 1.14.4
     engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
     dev: false
 
   registry.npmmirror.com/foreach/2.0.5:
@@ -2639,15 +2702,6 @@ packages:
     resolution: {integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/fs.realpath/download/fs.realpath-1.0.0.tgz}
     name: fs.realpath
     version: 1.0.0
-
-  registry.npmmirror.com/fsevents/2.3.2:
-    resolution: {integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/fsevents/download/fsevents-2.3.2.tgz}
-    name: fsevents
-    version: 2.3.2
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    requiresBuild: true
-    dev: false
-    optional: true
 
   registry.npmmirror.com/function-bind/1.1.1:
     resolution: {integrity: sha1-pWiZ0+o8m6uHS7l3O3xe3pL0iV0=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/function-bind/download/function-bind-1.1.1.tgz}
@@ -3369,6 +3423,8 @@ packages:
       promise-timeout: registry.npmmirror.com/promise-timeout/1.3.0
       protobufjs: registry.npmmirror.com/protobufjs/5.0.3
       uuid: registry.npmmirror.com/uuid/3.4.0
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   registry.npmmirror.com/leancloud-storage/4.12.0:
@@ -3389,6 +3445,8 @@ packages:
       promise-timeout: registry.npmmirror.com/promise-timeout/1.3.0
       underscore: registry.npmmirror.com/underscore/1.13.1
       uuid: registry.npmmirror.com/uuid/3.4.0
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   registry.npmmirror.com/levn/0.4.1:
@@ -3417,7 +3475,7 @@ packages:
       cli-truncate: registry.npmmirror.com/cli-truncate/2.1.0
       colorette: registry.npmmirror.com/colorette/1.4.0
       commander: registry.npmmirror.com/commander/8.3.0
-      debug: registry.npmmirror.com/debug/4.3.2
+      debug: registry.npmmirror.com/debug/4.3.2_supports-color@8.1.1
       enquirer: registry.npmmirror.com/enquirer/2.3.6
       execa: registry.npmmirror.com/execa/5.1.1
       js-yaml: registry.npmmirror.com/js-yaml/4.1.0
@@ -3738,6 +3796,8 @@ packages:
       cookie: registry.npmmirror.com/cookie/0.4.1
       debug: registry.npmmirror.com/debug/4.3.2
       iron-store: registry.npmmirror.com/iron-store/1.3.5
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   registry.npmmirror.com/next-translate/1.1.1_next@11.1.2+react@17.0.2:
@@ -3749,7 +3809,7 @@ packages:
       next: '>= 10.0.0'
       react: '>= 16.8.0'
     dependencies:
-      next: registry.npmmirror.com/next/11.1.2_react-dom@17.0.2+react@17.0.2
+      next: registry.npmmirror.com/next/11.1.2_8e3522129ef2816b3c737f17aecb3a9d
       react: registry.npmmirror.com/react/17.0.2
     dev: false
 
@@ -3762,7 +3822,7 @@ packages:
       escalade: registry.npmmirror.com/escalade/3.1.1
     dev: true
 
-  registry.npmmirror.com/next/11.1.2_react-dom@17.0.2+react@17.0.2:
+  registry.npmmirror.com/next/11.1.2_8e3522129ef2816b3c737f17aecb3a9d:
     resolution: {integrity: sha1-UnR1eHqaNi8byRaWKwwGVcwFvJE=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/next/download/next-11.1.2.tgz}
     id: registry.npmmirror.com/next/11.1.2
     name: next
@@ -3816,7 +3876,7 @@ packages:
       os-browserify: registry.npmmirror.com/os-browserify/0.3.0
       p-limit: registry.npmmirror.com/p-limit/3.1.0
       path-browserify: registry.npmmirror.com/path-browserify/1.0.1
-      pnp-webpack-plugin: registry.npmmirror.com/pnp-webpack-plugin/1.6.4
+      pnp-webpack-plugin: registry.npmmirror.com/pnp-webpack-plugin/1.6.4_typescript@4.4.4
       postcss: registry.npmmirror.com/postcss/8.2.15
       process: registry.npmmirror.com/process/0.11.10
       querystring-es3: registry.npmmirror.com/querystring-es3/0.2.1
@@ -3836,12 +3896,13 @@ packages:
       vm-browserify: registry.npmmirror.com/vm-browserify/1.1.2
       watchpack: registry.npmmirror.com/watchpack/2.1.1
     optionalDependencies:
-      '@next/swc-darwin-arm64': registry.npmmirror.com/@next/swc-darwin-arm64/11.1.2
-      '@next/swc-darwin-x64': registry.npmmirror.com/@next/swc-darwin-x64/11.1.2
-      '@next/swc-linux-x64-gnu': registry.npmmirror.com/@next/swc-linux-x64-gnu/11.1.2
-      '@next/swc-win32-x64-msvc': registry.npmmirror.com/@next/swc-win32-x64-msvc/11.1.2
+      '@next/swc-darwin-arm64': 11.1.2
+      '@next/swc-darwin-x64': 11.1.2
+      '@next/swc-linux-x64-gnu': 11.1.2
+      '@next/swc-win32-x64-msvc': 11.1.2
     transitivePeerDependencies:
       - '@babel/core'
+      - typescript
       - webpack
     dev: false
 
@@ -3854,7 +3915,7 @@ packages:
       next: ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0
       react: ^16.0.0 || ^17.0.0
     dependencies:
-      next: registry.npmmirror.com/next/11.1.2_react-dom@17.0.2+react@17.0.2
+      next: registry.npmmirror.com/next/11.1.2_8e3522129ef2816b3c737f17aecb3a9d
       nprogress: registry.npmmirror.com/nprogress/0.2.0
       react: registry.npmmirror.com/react/17.0.2
     dev: false
@@ -3868,7 +3929,7 @@ packages:
       next: '*'
       react: '*'
     dependencies:
-      next: registry.npmmirror.com/next/11.1.2_react-dom@17.0.2+react@17.0.2
+      next: registry.npmmirror.com/next/11.1.2_8e3522129ef2816b3c737f17aecb3a9d
       react: registry.npmmirror.com/react/17.0.2
     dev: false
 
@@ -4315,13 +4376,16 @@ packages:
       semver-compare: registry.npmmirror.com/semver-compare/1.0.0
     dev: true
 
-  registry.npmmirror.com/pnp-webpack-plugin/1.6.4:
+  registry.npmmirror.com/pnp-webpack-plugin/1.6.4_typescript@4.4.4:
     resolution: {integrity: sha1-yXEaxNxIpoXauvyG+Lbdn434QUk=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/pnp-webpack-plugin/download/pnp-webpack-plugin-1.6.4.tgz}
+    id: registry.npmmirror.com/pnp-webpack-plugin/1.6.4
     name: pnp-webpack-plugin
     version: 1.6.4
     engines: {node: '>=6'}
     dependencies:
-      ts-pnp: registry.npmmirror.com/ts-pnp/1.2.0
+      ts-pnp: registry.npmmirror.com/ts-pnp/1.2.0_typescript@4.4.4
+    transitivePeerDependencies:
+      - typescript
     dev: false
 
   registry.npmmirror.com/popper.js/1.16.1:
@@ -5302,6 +5366,8 @@ packages:
       qs: registry.npmmirror.com/qs/6.10.1
       readable-stream: registry.npmmirror.com/readable-stream/3.6.0
       semver: registry.npmmirror.com/semver/7.3.5
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   registry.npmmirror.com/supports-color/5.5.0:
@@ -5418,11 +5484,19 @@ packages:
       punycode: registry.npmmirror.com/punycode/2.1.1
     dev: false
 
-  registry.npmmirror.com/ts-pnp/1.2.0:
+  registry.npmmirror.com/ts-pnp/1.2.0_typescript@4.4.4:
     resolution: {integrity: sha1-pQCtCEsHmPHDBxrzkeZZEshrypI=, registry: https://registry.nlark.com/, tarball: https://registry.npmmirror.com/ts-pnp/download/ts-pnp-1.2.0.tgz}
+    id: registry.npmmirror.com/ts-pnp/1.2.0
     name: ts-pnp
     version: 1.2.0
     engines: {node: '>=6'}
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      typescript: registry.npmmirror.com/typescript/4.4.4
     dev: false
 
   registry.npmmirror.com/tsconfig-paths/3.11.0:
@@ -5778,6 +5852,8 @@ packages:
       upath: registry.npmmirror.com/upath/2.0.1
       webpack-virtual-modules: registry.npmmirror.com/webpack-virtual-modules/0.4.3
       windicss: registry.npmmirror.com/windicss/3.1.9
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   registry.npmmirror.com/windicss/3.1.9:

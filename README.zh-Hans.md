@@ -4,26 +4,22 @@
 
 [English](./README.md)
 
-这是一个基于[Next.js](https://nextjs.org/)中[`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)的`[WIP]`博客系统(可以这样说？)
+这是一个仍然`[WIP]`的基于[Next.js](https://nextjs.org/)中[`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)的博客系统(可以这样说？)
 
 ## 开始食用
 
 ### 安装依赖
 
 ```bash
-$ yarn
+$ npm i
 ```
 
 ### 运行开发环境
 
 ```bash
-$ yarn dev
+$ npm run dev
 ```
 
 That's all!
 
 打开浏览器输入<http://localhost:3000> 看看会出现什么？
-
-## :warning: 注意！
-
-本项目基于yarn2管理，您只能使用yarn来安装和使用！

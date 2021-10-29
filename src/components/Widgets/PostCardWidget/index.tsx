@@ -87,7 +87,7 @@ const PostCardWidget: FC<PostCardWidgetProps> = ({
               block
             >
               {t('read-more')}
-              <ArrowRightIcon className="w-5 h-5 pl-1 !-mr-3" />
+              <ArrowRightIcon className="w-5 h-5 pl-1" />
             </Link>
           </NextLink>
         </div>

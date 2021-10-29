@@ -9,7 +9,8 @@
     "clean": "rimraf .next pnpm-debug.log",
     "lint:check": "eslint .",
     "lint:fix": "eslint --fix .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@geist-ui/react": "^2.2.0",

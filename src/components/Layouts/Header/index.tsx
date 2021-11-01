@@ -11,7 +11,6 @@ import {
 
 import NavItem from './NavItem'
 import LocaleSwitcher from './LocaleSwitcher'
-import UserInfo from './UserInfo'
 
 const Header: FC = () => {
   const [showAfterRender, setShowAfterRender] = useState<boolean>(false)
@@ -42,7 +41,6 @@ const Header: FC = () => {
             Tags
           </NavItem>
           <LocaleSwitcher />
-          <UserInfo />
         </div>
       </div>
     </header>

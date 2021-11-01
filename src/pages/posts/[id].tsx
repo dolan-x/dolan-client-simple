@@ -14,7 +14,7 @@ import {
   NotFoundAPIResult
 } from '@/lib/types'
 import { usePost } from '@/lib/hooks'
-import { getAPILink } from '@/utils'
+import { getApiLink } from '@/utils'
 
 type PostPageProps = {
   id: PostID
@@ -74,7 +74,8 @@ export default PostPage
 
 export const getServerSideProps: GetServerSideProps = async ({ query, locale }) => {
   const { id } = query
-  const { data }: { data: Post } = await axios.get(getAPILink(`posts/${id}`))
+  const { data }: { data: Post } = await axios.get(getApiLink(`posts/${id}`))
+  // console.log(data)
 
   return {
     props: {

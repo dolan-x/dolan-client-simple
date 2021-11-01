@@ -1,6 +1,9 @@
 import useSWR from 'swr'
 
-import { Category, CategorySlug } from '@/lib/types'
+import {
+  Category,
+  CategorySlug
+} from '@/lib/types'
 
 type UseCategoryResult = {
   category: Category

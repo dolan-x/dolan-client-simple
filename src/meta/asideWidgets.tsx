@@ -9,6 +9,7 @@ import {
   useTags,
   useCategories
 } from '@/lib/hooks'
+import toast from '@/lib/toast'
 
 const TagCloudWidget = dynamic(async () => await import('@/components/Widgets/TagCloudWidget'))
 const TagsWidgetContainer: FC = () => {
@@ -17,6 +18,11 @@ const TagsWidgetContainer: FC = () => {
     isLoading,
     isError
   } = useTags()
+  if (isError) {
+    toast('error', {
+      text: 'Error loading tags'
+    })
+  }
   return (
     <>
       {wrapLoadingWidget(isLoading, <TagCloudWidget tags={tags} />, <AsideWidgetSkeleton />)}
@@ -31,6 +37,11 @@ const CategoriesWidgetContainer: FC = () => {
     isLoading,
     isError
   } = useCategories()
+  if (isError) {
+    toast('error', {
+      text: 'Error loading categories'
+    })
+  }
   return (
     <>
       {wrapLoadingWidget(isLoading, <CategoriesWidget categories={categories} />, <AsideWidgetSkeleton />)}

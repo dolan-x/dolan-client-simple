@@ -3,15 +3,21 @@ import axios from 'axios'
 import '@/lib/axiosConfig'
 
 export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
+  if (!process.env.API_URL) {
+    res
+      .status(500)
+      .json({ error: 'API_URL is not defined' })
+    return
+  }
   if (!['GET', 'get'].includes(req.method)) {
     res
       .status(405)
-      .setHeader('Content-Type', 'application/json')
-      .end({
+      .json({
         code: 405,
         message: 'Method not allowed',
         error: 'Method not allowed'
       })
+    return
   }
   const { slug: _slug, ..._query } = req.query
   const slug = _slug as string[]
@@ -28,6 +34,5 @@ export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> 
   const result = await response
   res
     .status(result.status)
-    .setHeader('Content-Type', 'application/json')
-    .end(JSON.stringify(result.data))
+    .json(result.data)
 }

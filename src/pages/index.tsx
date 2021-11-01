@@ -9,6 +9,7 @@ import { EyeOffIcon } from '@heroicons/react/outline'
 
 import { Post } from '@/lib/types'
 import { usePosts } from '@/lib/hooks'
+import toast from '@/lib/toast'
 
 import Widget from '@/components/Widgets'
 import PostCardWidget from '@/components/Widgets/PostCardWidget'
@@ -36,6 +37,12 @@ const IndexPage: FC = () => {
   const posts = data.posts ? [...data.posts] : []
   const renderPostList = (): ReactNode => {
     if (data.isLoading) return <PostCardSkeleton />
+    if (data.isError) {
+      toast('error', {
+        text: 'Error Loading Posts'
+      })
+      return <div>error</div>
+    }
     return (
       <>
         {posts.map((post: Post) => {

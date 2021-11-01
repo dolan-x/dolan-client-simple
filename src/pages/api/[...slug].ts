@@ -3,7 +3,7 @@ import axios from 'axios'
 import '@/lib/axiosConfig'
 
 export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
-  if (req.method !== 'GET') {
+  if (!['GET', 'get'].includes(req.method)) {
     res
       .status(405)
       .setHeader('Content-Type', 'application/json')

@@ -17,7 +17,6 @@ import 'windi.css'
 
 import BackToTop from '@/components/BackToTop'
 import { fetcher } from '@/lib/fetcher'
-import { checkValidEnvConfig } from '@/utils'
 
 import 'inter-ui/inter.css'
 import '@/styles/global.css'
@@ -25,16 +24,10 @@ import '@/styles/global.css'
 import 'intl-pluralrules'
 import toast from '@/lib/toast'
 
-type ExtendAppType = {
-  isValid: boolean
-  missingSettings: string[]
-}
-const MyApp: NextPage<AppProps, ExtendAppType> = ({
+const MyApp: NextPage<AppProps> = ({
   Component,
-  pageProps,
-  isValid,
-  missingSettings
-}: AppProps & ExtendAppType) => {
+  pageProps
+}: AppProps) => {
   return (
     <>
       <GeistProvider>
@@ -46,38 +39,13 @@ const MyApp: NextPage<AppProps, ExtendAppType> = ({
           />
           <BackToTop />
           <div className="bg-body-color min-h-screen">
-            <If condition={isValid}>
-              <Then>
-                <Component {...pageProps} />
-              </Then>
-              <Else>
-                <div>
-                  Config {missingSettings.join(',')} is NOT set
-                </div>
-              </Else>
-            </If>
+            <Component {...pageProps} />
           </div>
         </SWRConfig>
         <ToastContainer />
       </GeistProvider>
     </>
   )
-}
-
-MyApp.getInitialProps = async (context) => {
-  const {
-    isValid,
-    missingSettings
-  } = checkValidEnvConfig()
-  if (!isValid) {
-    toast('error', {
-      text: `Config ${missingSettings.join(',')} is not set in .env`
-    })
-  }
-  return {
-    isValid,
-    missingSettings
-  }
 }
 
 export default MyApp

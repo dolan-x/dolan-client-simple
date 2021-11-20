@@ -13,6 +13,7 @@ import Layout from '@/components/Layouts'
 import { useCategory } from '@/lib/hooks'
 import { getCategoryLink } from '@/utils'
 import { CategorySlug } from '@/lib/types'
+import toast from '@/lib/toast'
 
 const CategoryPage: FC = () => {
   const router = useRouter()
@@ -23,6 +24,11 @@ const CategoryPage: FC = () => {
     isError
   } = useCategory(slug as CategorySlug)
   const { t } = useTranslation('widgets')
+  if (isError) {
+    toast('error', {
+      text: 'Error loading categories'
+    })
+  }
 
   return (
     <>
@@ -30,7 +36,7 @@ const CategoryPage: FC = () => {
         <title>{slug}_Test</title>
       </Head>
       <Layout>
-        {isLoading
+        {isLoading || isError
           ? (
             <PageSkeleton />
             )

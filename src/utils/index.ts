@@ -65,3 +65,15 @@ export const wrapLoadingWidget = (isLoading: boolean, component: ReactNode, load
   if (isLoading) return loadingComponent || null
   return component
 }
+
+export const checkValidEnvConfig = (): {
+  isValid: boolean
+  missingSettings: string[]
+} => {
+  const requiredSettings = ['BASE_URL', 'API_URL']
+  const missingSettings = requiredSettings.filter(setting => !process.env[setting])
+  return {
+    isValid: missingSettings.length === 0,
+    missingSettings
+  }
+}

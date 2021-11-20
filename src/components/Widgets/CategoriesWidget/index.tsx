@@ -9,7 +9,7 @@ import { Category } from '@/lib/types'
 type CategoriesWidgetProps = {
   categories: Category[]
 }
-const TagCloudWidget: FC<CategoriesWidgetProps> = ({ categories }) => {
+const CategoriesWidget: FC<CategoriesWidgetProps> = ({ categories }) => {
   const { t } = useTranslation('widgets')
 
   return (
@@ -28,4 +28,4 @@ const TagCloudWidget: FC<CategoriesWidgetProps> = ({ categories }) => {
   )
 }
 
-export default TagCloudWidget
+export default CategoriesWidget

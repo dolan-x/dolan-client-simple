@@ -22,6 +22,7 @@ const TagsWidgetContainer: FC = () => {
     toast('error', {
       text: 'Error loading tags'
     })
+    return null
   }
   return (
     <>
@@ -41,6 +42,7 @@ const CategoriesWidgetContainer: FC = () => {
     toast('error', {
       text: 'Error loading categories'
     })
+    return null
   }
   return (
     <>

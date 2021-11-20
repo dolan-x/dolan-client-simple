@@ -36,12 +36,18 @@ const IndexPage: FC = () => {
   const data = usePosts()
   const posts = data.posts ? [...data.posts] : []
   const renderPostList = (): ReactNode => {
-    if (data.isLoading) return <PostCardSkeleton />
+    if (data.isLoading || data.isError) {
+      return (
+        <>
+          {new Array(4).fill(undefined).map((_, i) => <PostCardSkeleton key={i} />)
+          }
+        </>
+      )
+    }
     if (data.isError) {
       toast('error', {
-        text: 'Error Loading Posts'
+        text: 'Error loading posts'
       })
-      return <div>error</div>
     }
     return (
       <>

@@ -1,11 +1,11 @@
 import { ReactNode } from 'react'
-import { toast as _toast, ToastPosition, ToastOptions } from 'react-toastify'
+import { toast as _toast, ToastOptions } from 'react-toastify'
 
 type Toasts = 'default' | 'success' | 'error' | 'warn' | 'info'
 const defaultToastType = 'default' as Toasts
 type ToastType = Toasts & typeof defaultToastType
 const defaultOptions: ToastOptions = {
-  position: 'bottom-right' as ToastPosition,
+  position: 'bottom-right',
   autoClose: 5000,
   hideProgressBar: false,
   closeOnClick: true,

@@ -29,7 +29,7 @@ const Widget: FC<WidgetProps> = ({
 }) => {
   return (
     <Card
-      className={`!mb-4 !shadow-widget !border-none ${rounded ? '!rounded-lg' : ''} ${sticky ? 'sticky' : ''} ${className}`}
+      className={`!mb-4 !shadow-none !border-none ${rounded ? '!rounded-lg' : ''} ${sticky ? 'sticky' : ''} ${className}`}
       {...props}
     >
       {children}

@@ -2,7 +2,7 @@ name: Deploy Dolan-Test Website
 on: [push]
 jobs:
   deploy:
-    if: github.repository == 'dolan-x/dolan'
+    if: github.repository == 'dolan-x/dolan-client-simple'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

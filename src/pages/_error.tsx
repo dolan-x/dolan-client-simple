@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { NextPage } from 'next'
 import useTranslation from 'next-translate/useTranslation'
 import { Text } from '@geist-ui/react'
 
@@ -8,7 +8,7 @@ import Layout from '@/components/Layouts'
 type ErrorPageProps = {
   statusCode: number
 }
-const ErrorPage: FC<ErrorPageProps> = ({ statusCode }) => {
+const ErrorPage: NextPage<ErrorPageProps> = ({ statusCode }: ErrorPageProps) => {
   const { t } = useTranslation('common')
   return (
     <>

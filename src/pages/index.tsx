@@ -1,3 +1,4 @@
+import { NextPage } from 'next'
 import {
   FC,
   ReactNode
@@ -31,16 +32,15 @@ const Nothing: FC = () => {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const IndexPage: FC = () => {
+const IndexPage: NextPage = () => {
   /* Post List */
   const data = usePosts()
-  const posts = data.posts ? [...data.posts] : []
+  const posts = data.posts || []
   const renderPostList = (): ReactNode => {
     if (data.isLoading || data.isError) {
       return (
         <>
-          {new Array(4).fill(undefined).map((_, i) => <PostCardSkeleton key={i} />)
-          }
+          {Array.from({ length: 4 }).map((_, i) => <PostCardSkeleton key={i} />)}
         </>
       )
     }
@@ -59,18 +59,14 @@ const IndexPage: FC = () => {
             authors,
             postMetas
           } = post
-
-          if (post.type === 'post') {
-            return <PostCardWidget
-              key={post.id}
-              title={title.rendered}
-              excerpt={excerpt.rendered}
-              postID={id}
-              authors={authors}
-              postMetas={postMetas}
-            />
-          }
-          return null
+          return <PostCardWidget
+            key={post.id}
+            title={title.rendered}
+            excerpt={excerpt.rendered}
+            postID={id}
+            authors={authors}
+            postMetas={postMetas}
+          />
         })}
       </>
     )

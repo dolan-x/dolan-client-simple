@@ -1,5 +1,6 @@
 import useSWR from 'swr'
 
+import { getApiLink } from '@/utils'
 import { Tag } from '@/lib/types'
 
 type UseTagsResult = {
@@ -9,7 +10,7 @@ type UseTagsResult = {
 }
 
 export const useTags = (): UseTagsResult => {
-  const { data, error } = useSWR('/api/tags')
+  const { data, error } = useSWR(getApiLink('tags', false))
 
   return {
     tags: data,

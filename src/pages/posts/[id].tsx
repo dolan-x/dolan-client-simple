@@ -1,5 +1,7 @@
-import { FC } from 'react'
-import { GetServerSideProps } from 'next'
+import {
+  NextPage,
+  GetServerSideProps
+} from 'next'
 import Head from 'next/head'
 import axios from 'axios'
 
@@ -9,31 +11,17 @@ import Article from '@/components/Layouts/Article'
 
 import {
   Post,
-  PostID,
-  SuccessAPIResult,
-  NotFoundAPIResult
+  PostID
 } from '@/lib/types'
 import { usePost } from '@/lib/hooks'
 import { getApiLink } from '@/utils'
 
 type PostPageProps = {
   id: PostID
-  data: Post & SuccessAPIResult | NotFoundAPIResult
+  data: Post | undefined
 }
 
-const PostPage: FC<PostPageProps> = ({ id, data }) => {
-  if (data.status === 404) {
-    return (
-      <>
-        <Head>
-          <title>404_Test</title>
-        </Head>
-        <Layout>
-          404
-        </Layout>
-      </>
-    )
-  }
+const PostPage: NextPage<PostPageProps> = ({ id, data }: PostPageProps) => {
   const { post } = usePost(id, data)
   const {
     postMetas,
@@ -72,10 +60,19 @@ const PostPage: FC<PostPageProps> = ({ id, data }) => {
 
 export default PostPage
 
-export const getServerSideProps: GetServerSideProps = async ({ query, locale }) => {
+export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const { id } = query
-  const { data }: { data: Post } = await axios.get(getApiLink(`posts/${id}`))
-  // console.log(data)
+  let data: Post | undefined
+  try {
+    data = await axios.get(getApiLink(`posts/${id}`))
+  } catch {
+    data = null
+  }
+  if (!data) {
+    return {
+      notFound: true
+    }
+  }
 
   return {
     props: {

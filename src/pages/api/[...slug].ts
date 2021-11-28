@@ -1,9 +1,11 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import axios from 'axios'
-import '@/lib/axiosConfig'
+import {
+  NextApiRequest,
+  NextApiResponse
+} from 'next'
+import ajax from '@/lib/ajax'
 
 export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
-  if (!process.env.API_URL) {
+  if (!process.env.API_URL) { // If API_URL is not defined
     res
       .status(500)
       .json({
@@ -13,7 +15,7 @@ export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> 
       })
     return
   }
-  if (!['GET', 'get'].includes(req.method)) {
+  if (req.method.toUpperCase() !== 'GET') { // Validate request method. Only allows GET
     res
       .status(405)
       .json({
@@ -23,30 +25,30 @@ export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> 
       })
     return
   }
-  const { slug: _slug, ..._query } = req.query
+  const { slug: _slug, ..._query } = req.query // `slug` is path
   const slug = _slug as string[]
-  const encodedSlugs = slug.map(encodeURIComponent).join('/')
-  const pathWithoutQuery = `${encodedSlugs}`
+  const pathWithoutQuery = slug.map(encodeURIComponent).join('/') // Combine path (no query)
   const queries = []
   Object
-    .keys(_query)
-    .forEach(key => {
-      queries.push(encodeURIComponent(`${key}=${_query[key]}`))
+    .entries(_query)
+    .forEach(([key, value]: [string, string]) => {
+      queries.push(encodeURIComponent(`${key}=${value}`)) // Combine querystring
     })
-  const path = `${pathWithoutQuery}?${queries.join('&')}`
+  const path = `${pathWithoutQuery}?${queries.join('&')}` // Combine full path (with query)
   try {
-    const response = axios.get(`${process.env.API_URL}/v1/${path}`)
+    const response = ajax.get(`${process.env.API_URL}/v1/${path}`) // Get Data
     const result = await response
     res
       .status(result.status)
-      .json((result.data as any).data)
+      .setHeader('Content-Type', result.headers['Content-Type'])
+      .end((result.data as any).data) // By default the result has some other data, don't display
   } catch {
     res
       .status(404)
       .json({
         statusCode: 404,
-        message: 'Network error',
-        error: 'Network error'
+        message: 'Not Found',
+        error: 'Not Found'
       })
   }
 }

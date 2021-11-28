@@ -6,9 +6,10 @@ import { SupportedLocales } from '@/lib/types'
  * Receives a string,
  * returns an API URL.
  * @param {string} url
+ * @param {string} isServer
  * @returns {string}
  */
-export const getApiLink = (url: string): string => `${process.env.BASE_URL}/api/${url}`
+export const getApiLink = (url: string, isServer = true): string => `${isServer ? process.env.BASE_URL : ''}/api/${url}`
 /**
  * Receives a post id,
  * returns a post URL.

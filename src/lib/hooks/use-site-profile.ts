@@ -1,5 +1,6 @@
 import useSWR from 'swr'
 
+import { getApiLink } from '@/utils'
 import { SiteProfile } from '@/lib/types'
 
 type UseSiteProfileResult = {
@@ -9,7 +10,7 @@ type UseSiteProfileResult = {
 }
 
 export const useSiteProfile = (): UseSiteProfileResult => {
-  const { data, error } = useSWR('/api/profile/site')
+  const { data, error } = useSWR(getApiLink('profile/site', false))
 
   return {
     siteProfile: data,

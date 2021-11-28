@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { NextPage } from 'next'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
@@ -14,7 +14,7 @@ import { useTag } from '@/lib/hooks'
 import { getTagLink } from '@/utils'
 import { TagSlug } from '@/lib/types'
 
-const TagPage: FC = () => {
+const TagPage: NextPage = () => {
   const router = useRouter()
   const { slug } = router.query
   const {
@@ -30,7 +30,7 @@ const TagPage: FC = () => {
         <title>{slug}_Test</title>
       </Head>
       <Layout>
-        {isLoading
+        {isLoading || isError
           ? (
             <PageSkeleton />
             )

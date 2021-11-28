@@ -1,5 +1,6 @@
 import useSWR from 'swr'
 
+import { getApiLink } from '@/utils'
 import {
   Category,
   CategorySlug
@@ -12,7 +13,7 @@ type UseCategoryResult = {
 }
 
 export const useCategory = (slug: CategorySlug): UseCategoryResult => {
-  const { data, error } = useSWR(`/api/categories/${slug}`)
+  const { data, error } = useSWR(getApiLink(`categories/${slug}`, false))
 
   return {
     category: data,

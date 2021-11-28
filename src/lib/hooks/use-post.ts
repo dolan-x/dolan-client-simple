@@ -1,6 +1,10 @@
 import useSWR from 'swr'
 
-import { Post, PostID } from '@/lib/types'
+import { getApiLink } from '@/utils'
+import {
+  Post,
+  PostID
+} from '@/lib/types'
 
 type UsePostResult = {
   post: Post
@@ -9,7 +13,7 @@ type UsePostResult = {
 }
 
 export const usePost = (id: PostID, fallbackData?: Post): UsePostResult => {
-  const { data, error } = useSWR(`/api/posts/${id}`, { fallbackData })
+  const { data, error } = useSWR(getApiLink(`posts/${id}`, false), { fallbackData })
 
   return {
     post: data,

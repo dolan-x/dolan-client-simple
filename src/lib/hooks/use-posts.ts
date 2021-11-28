@@ -1,5 +1,6 @@
 import useSWR from 'swr'
 
+import { getApiLink } from '@/utils'
 import { Post } from '@/lib/types'
 
 type UsePostsResult = {
@@ -9,7 +10,7 @@ type UsePostsResult = {
 }
 
 export const usePosts = (): UsePostsResult => {
-  const { data, error } = useSWR('/api/posts')
+  const { data, error } = useSWR(getApiLink('posts', false))
 
   return {
     posts: data,

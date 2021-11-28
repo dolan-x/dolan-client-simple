@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { NextPage } from 'next'
 import Head from 'next/head'
 
 import PageSkeleton from '@/components/Widgets/Page.skeleton'
@@ -7,7 +7,7 @@ import Layout from '@/components/Layouts'
 
 import { useTags } from '@/lib/hooks'
 
-const TagsPage: FC = () => {
+const TagsPage: NextPage = () => {
   const {
     tags,
     isLoading,
@@ -20,7 +20,7 @@ const TagsPage: FC = () => {
         <title>Tags_Test</title>
       </Head>
       <Layout>
-        {isLoading
+        {isLoading || isError
           ? (
             <PageSkeleton />
             )

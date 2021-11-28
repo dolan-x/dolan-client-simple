@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { NextPage } from 'next'
 import Head from 'next/head'
 
 import PageSkeleton from '@/components/Widgets/Page.skeleton'
@@ -7,7 +7,7 @@ import Layout from '@/components/Layouts'
 
 import { useCategories } from '@/lib/hooks'
 
-const CategoriesPage: FC = () => {
+const CategoriesPage: NextPage = () => {
   const {
     categories,
     isLoading,
@@ -20,7 +20,7 @@ const CategoriesPage: FC = () => {
         <title>Categories_Test</title>
       </Head>
       <Layout>
-        {isLoading
+        {isLoading || isError
           ? (
             <PageSkeleton />
             )

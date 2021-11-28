@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { NextPage } from 'next'
 import NextLink from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
 import {
@@ -9,7 +9,7 @@ import {
 import Widget from '@/components/Widgets'
 import Layout from '@/components/Layouts'
 
-const FourOFourPage: FC = () => {
+const FourOFourPage: NextPage = () => {
   const { t } = useTranslation('common')
   return (
     <>
@@ -27,7 +27,7 @@ const FourOFourPage: FC = () => {
             </Text>
             <NextLink href="/">
               <Button
-                className="mt-20"
+                className="!mt-20"
                 type="error"
                 ghost
               >

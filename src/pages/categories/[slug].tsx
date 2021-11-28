@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { NextPage } from 'next'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
@@ -15,7 +15,7 @@ import { getCategoryLink } from '@/utils'
 import { CategorySlug } from '@/lib/types'
 import toast from '@/lib/toast'
 
-const CategoryPage: FC = () => {
+const CategoryPage: NextPage = () => {
   const router = useRouter()
   const { slug } = router.query
   const {

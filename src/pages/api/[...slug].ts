@@ -40,8 +40,7 @@ export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> 
     const result = await response
     res
       .status(result.status)
-      .setHeader('Content-Type', result.headers['Content-Type'])
-      .end((result.data as any).data) // By default the result has some other data, don't display
+      .json((result.data as any).data) // By default the result has some other data, don't display
   } catch {
     res
       .status(404)

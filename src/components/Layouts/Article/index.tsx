@@ -32,7 +32,7 @@ const Article: FC<ArticleProps> = ({
 
   return (
     <>
-      <Widget>
+      {headingImage && <Widget>
         <HeadingImage
           className="-mb-card"
           title={title}
@@ -40,7 +40,7 @@ const Article: FC<ArticleProps> = ({
           hoverable={false}
           roundedBottom
         />
-      </Widget>
+      </Widget>}
       <PostMeta
         authorNames={authorNames}
         timestamp={timestamp}

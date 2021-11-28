@@ -34,6 +34,7 @@ const PostCardWidget: FC<PostCardWidgetProps> = ({
 }) => {
   const { t } = useTranslation('common')
   const link = useMemo(() => getPostLink(postID), [postID])
+  console.log(link)
 
   return (
     <Widget className="w-full px-0">

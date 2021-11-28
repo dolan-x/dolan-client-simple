@@ -60,7 +60,7 @@ const IndexPage: NextPage = () => {
             postMetas
           } = post
           return <PostCardWidget
-            key={post.id}
+            key={id}
             title={title.rendered}
             excerpt={excerpt.rendered}
             postID={id}

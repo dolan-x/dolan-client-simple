@@ -62,9 +62,9 @@ export default PostPage
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const { id } = query
-  let data: Post | undefined
+  let data
   try {
-    data = await axios.get(getApiLink(`posts/${id}`))
+    data = (await axios.get(getApiLink(`posts/${id}`))).data
   } catch {
     data = null
   }
